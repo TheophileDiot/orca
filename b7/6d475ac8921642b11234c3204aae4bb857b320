@@ -1,0 +1,84 @@
+src/main/jcode/hook-service-read-failure.test.ts
+  s_49f9b4522c8e46::t_6ae71dd71ee874 1-72,74-112
+  s_49f9b4522c8e46::t_592dcb07134b3e 73
+src/main/jcode/hook-service.test.ts
+  s_2540424957e342::t_bcea41c8f2b337 2-13,409-411,476-520
+  s_2540424957e342::t_1bc820d7f200d0 35-53,262-308,320-408,521
+  s_2540424957e342::t_2bb19fec796787 309-319
+  s_49f9b4522c8e46::t_6ae71dd71ee874 412-468,470-475,522
+  s_49f9b4522c8e46::t_146675a599ba8d 469
+src/main/agent-hooks/remote-hook-service-installers-jcode.test.ts
+  s_2540424957e342::t_87024843505f2c 1-131,163
+  s_49f9b4522c8e46::t_1f8d5fc62760a6 132-162
+src/main/agent-hooks/remote-hook-service-installers-sftp.test-fixture.ts
+  s_49f9b4522c8e46::t_3d1d58968fe539 29
+  s_49f9b4522c8e46::t_1f8d5fc62760a6 8,19-20,28,30-31
+  s_2540424957e342::t_87024843505f2c 1-7,9-18,21-24,26-27,32-99
+  s_49f9b4522c8e46::t_5b626f7ab8b1cb 25
+src/main/jcode/hook-text-edits.ts
+  s_49f9b4522c8e46::t_dcf6ac5bb0a859 92-93,97-114
+  s_6a3cc52333088e::t_28f34a05e91bde 129-132,146-147
+  s_6a3cc52333088e::t_0fe346d143eab6 1-91,94-96,115-128,133-145,148-209
+src/main/jcode/hook-assignment-scan.ts
+  s_49f9b4522c8e46::t_3d1d58968fe539 40-41,64,101-102,111
+  s_6a3cc52333088e::t_dbe767c51a4ef0 1-39,42-63,65-100,103-110,112-210
+src/main/agent-hooks/remote-hook-service-installers.test.ts
+  s_2540424957e342::t_87024843505f2c 29
+src/main/jcode/hook-config.test.ts
+  s_6a3cc52333088e::t_c480cb018faece 9,463-530
+  s_6a3cc52333088e::t_240170ba29ec48 213
+  s_6a3cc52333088e::t_5128abb9a3435b 13-28
+  s_49f9b4522c8e46::t_1f8d5fc62760a6 4
+  s_6a3cc52333088e::t_3c1459bd6eb1f2 217-218,232-233,243-244
+  s_6a3cc52333088e::t_29eaf7bbd4ebe8 178-212,214-216,219-231,234-242,245-288,302-358,425-462,531-563
+  s_6a3cc52333088e::t_8a5afa02d3a66d 289-301
+  s_49f9b4522c8e46::t_7cdc02a91d271b 359-417,421-424
+  s_49f9b4522c8e46::t_13f1af06fae830 418-420
+src/main/jcode/hook-service.ts
+  s_49f9b4522c8e46::t_13f1af06fae830 186-189
+  s_2540424957e342::t_5fbc9b51ab62d2 6
+  s_49f9b4522c8e46::t_dcf6ac5bb0a859 25,27,121-123,127,152-155,159,166,185,202,216,222-232,248-249,251,264,293-298,300-306,308-309,312-322
+  s_2540424957e342::t_bd055d45585db7 24,26,126,128-131,144,193,197,201,203-207,210,213,240-247,250,252-263,265-268,270-279,281-290
+  s_2540424957e342::t_1632db6bb5451b 1,156-158,160-165,324-325,327
+  s_49f9b4522c8e46::t_338616e09c11c0 323
+src/main/jcode/hook-config.ts
+  s_6a3cc52333088e::t_f24895c3cb84c4 4,18,27-28,32,34-35,41,48,62,65,74,90-93,95-97,99-102,111-116,120-128,132-133,135,142-144,147-150,153
+  s_49f9b4522c8e46::t_dcf6ac5bb0a859 104-108
+  s_6a3cc52333088e::t_cc5424547bb5ac 5-7,9-16,43-44,47,49-52,54-61,63-64,68-73,75,94,146
+  s_2540424957e342::t_bd055d45585db7 53
+  s_49f9b4522c8e46::t_3d1d58968fe539 20-26,31,33,36,39-40,80,103
+src/main/agent-hooks/README.md
+  s_2540424957e342::t_14a0090d444daa 60
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "b76d475ac8921642b11234c3204aae4bb857b320",
+  "prompts": {},
+  "sessions": {
+    "s_2540424957e342": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "1d2f0407-853d-438c-b360-cb3069adccbb",
+        "model": "claude-sonnet-5-5"
+      },
+      "human_author": "TheophileDiot <tdiot@bunkerity.com>"
+    },
+    "s_49f9b4522c8e46": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "f323d5b6-448d-4f4b-aa4d-1caf63e216c1",
+        "model": "claude-sonnet-5-5"
+      },
+      "human_author": "TheophileDiot <tdiot@bunkerity.com>"
+    },
+    "s_6a3cc52333088e": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "e2a337b5-1df8-49e5-a960-d4e812c2cd35",
+        "model": "claude-sonnet-5-5"
+      },
+      "human_author": "TheophileDiot <tdiot@bunkerity.com>"
+    }
+  }
+}
