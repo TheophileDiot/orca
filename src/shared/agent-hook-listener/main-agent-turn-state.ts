@@ -6,6 +6,8 @@ export type JcodeTurnAdmission = {
   revision: number
   active: boolean
   lastActivityAt: number
+  settled?: boolean
+  lateTurnEndReceived?: true
 }
 
 export type GrokActiveTurn = {

@@ -1,92 +1,84 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import { AgentHookServer } from './server'
+import { mkdirSync, mkdtempSync, rmSync, writeFileSync } from 'node:fs'
+import { tmpdir } from 'node:os'
+import { join } from 'node:path'
 import { buildBody, GOOD_PANE, PANE } from './server.test-fixtures'
 import type { AgentHookEventPayload } from '../../shared/agent-hook-listener/listener-event'
-import { normalizeHookPayload } from '../../shared/agent-hook-listener'
+import { normalizeHookPayload, prepareJcodeHookPayload } from '../../shared/agent-hook-listener'
+import { bindJcodeRootSession } from '../../shared/agent-hook-listener/jcode-session-registry'
 import {
   clearAllListenerCaches,
   clearPaneCacheState,
   clearPaneTurnCacheState,
   createHookListenerState,
+  deleteLegacyAgentStatus,
   seedLegacyAgentStatusForTests,
   type HookListenerState
 } from '../../shared/agent-hook-listener/listener-state'
 import { cacheRelayLegacyAgentStatus } from '../../shared/agent-status-legacy-relay-cache'
 import { settleJcodeRootTurn } from '../../shared/agent-hook-listener/providers/jcode-events'
+import { seedJcodeStateFromSnapshot } from '../../shared/agent-hook-listener/providers/jcode-roster-state'
 import { AGENT_STATUS_STALE_AFTER_MS } from '../../shared/agent-status-types'
 
-// Jcode 0.99.0 capture2 Skunk A/C payloads; the C start has the identical object.
-const TURN_START = {
-  cwd: '/tmp/jcode-capture/work/edit',
-  event: 'turn_start',
-  model: 'claude-opus-5-5',
-  session_id: 'session_skunk_1792604312924_a75443e0fd91bbda',
-  source: 'chat'
+import {
+  TURN_START,
+  TOOL,
+  TURN_END,
+  SESSION_END,
+  LATE_TOOL
+} from './server-jcode-turn-lifecycle-fixtures'
+
+class LifecycleServer extends AgentHookServer {
+  acceptJcode(payload: Record<string, unknown>, overrides: Partial<AgentHookEventPayload> = {}) {
+    const prepared = prepareJcodeHookPayload(
+      this._getStateForTests(),
+      buildBody(payload),
+      'production'
+    )
+    if (!prepared?.event) {
+      return null
+    }
+    const event = { ...prepared.event, ...overrides }
+    const row = this.applyNormalizedStatus(
+      event,
+      undefined,
+      'hook',
+      undefined,
+      undefined,
+      false,
+      prepared.commit
+    )
+    return row === this._getStateForTests().lastStatusByPaneKey.get(PANE) ? (row ?? null) : null
+  }
 }
 
-const TOOL = {
-  cwd: '/tmp/jcode-capture/work/edit',
-  duration_ms: '4',
-  event: 'post_tool',
-  output_bytes: '141',
-  session_id: 'session_skunk_1792604312924_a75443e0fd91bbda',
-  status: 'ok',
-  tool_call_id: 'toolu_01TZBbR67P4rUjBmfNMGPpQa',
-  tool_input:
-    '{"content":"one","file_path":"edit-me.txt","intent":"Create edit-me.txt with text one"}',
-  tool_name: 'write',
-  touched_paths: '/tmp/jcode-capture/work/edit/edit-me.txt'
-}
-
-const TURN_END = {
-  cache_read_tokens: '85906',
-  cache_write_tokens: '589',
-  cwd: '/tmp/jcode-capture/work/edit',
-  duration_ms: '12632',
-  event: 'turn_end',
-  input_tokens: '616',
-  last_assistant_text:
-    'I created `edit-me.txt` containing exactly `one`, with no trailing newline.',
-  model: 'claude-opus-5-5',
-  output_tokens: '138',
-  prompt_tokens: '87111',
-  session_id: 'session_skunk_1792604312924_a75443e0fd91bbda',
-  status: 'ok'
-}
-
-const SESSION_END = {
-  cwd: '/tmp/jcode-capture/work/edit',
-  event: 'session_end',
-  model: 'claude-opus-5-5',
-  session_id: 'session_skunk_1792604312924_a75443e0fd91bbda',
-  source: 'close'
-}
-
-const LATE_TOOL = {
-  cwd: '/tmp/jcode-capture/work/edit',
-  duration_ms: '60002',
-  event: 'post_tool',
-  output_bytes: '42',
-  session_id: 'session_skunk_1792604312924_a75443e0fd91bbda',
-  status: 'ok',
-  tool_call_id: 'toolu_01W9skACGmbdV4ceskfT1b8v',
-  tool_input: '{"command":"sleep 60","intent":"Sleep 60 seconds","timeout":90000}',
-  tool_name: 'bash',
-  touched_paths: ''
-}
+let home: string
+beforeEach(() => {
+  home = mkdtempSync(join(tmpdir(), 'jcode-turn-lifecycle-'))
+  mkdirSync(join(home, 'sessions'))
+  vi.stubEnv('JCODE_HOME', home)
+  for (const id of [TURN_START.session_id, 'root', 'replacement', 'worker', 'different-session']) {
+    writeFileSync(join(home, 'sessions', `${id}.json`), JSON.stringify({ id, parent_id: null }))
+  }
+})
+afterEach(() => {
+  vi.unstubAllEnvs()
+  rmSync(home, { recursive: true, force: true })
+})
 
 function cacheSnapshot(state: HookListenerState) {
   return structuredClone({ ...state, lastStatusByPaneKey: new Map(state.lastStatusByPaneKey) })
 }
 
 describe.each([null, 'ssh-connection'])('Jcode turn lifecycle on host %s', (connectionId) => {
-  let server: AgentHookServer
+  let server: LifecycleServer
   let state: HookListenerState
 
   beforeEach(() => {
     vi.useFakeTimers()
     vi.setSystemTime(1_000)
-    server = new AgentHookServer()
+    server = new LifecycleServer()
     state = connectionId === null ? server._getStateForTests() : createHookListenerState()
   })
 
@@ -97,12 +89,20 @@ describe.each([null, 'ssh-connection'])('Jcode turn lifecycle on host %s', (conn
   })
 
   function send(payload: Record<string, unknown>) {
-    const event = normalizeHookPayload(state, 'jcode', buildBody(payload), 'production')
+    if (connectionId === null) {
+      return server.acceptJcode(payload)
+    }
+    const prepared = prepareJcodeHookPayload(state, buildBody(payload), 'production')
+    const event = prepared?.event ?? null
     if (event) {
       if (connectionId !== null) {
-        cacheRelayLegacyAgentStatus(state, event, 16, (paneKey) =>
-          clearPaneCacheState(state, paneKey)
-        )
+        if (
+          cacheRelayLegacyAgentStatus(state, event, 16, (paneKey) =>
+            clearPaneCacheState(state, paneKey)
+          )
+        ) {
+          prepared?.commit()
+        }
       }
       server.ingestRemote(event, connectionId)
     }
@@ -161,9 +161,15 @@ describe.each([null, 'ssh-connection'])('Jcode turn lifecycle on host %s', (conn
     send(TURN_START)
     expect(send(TOOL)?.payload.state).toBe('working')
     send({ ...TURN_START, event: 'session_start', source: 'resume' })
-    const resumed = server.getStatusSnapshot()
-    expect(send(TOOL)).toBeNull()
-    expect(server.getStatusSnapshot()).toEqual(resumed)
+    expect(state.jcodeTurnByPaneKey.get(PANE)?.active).toBe(true)
+    expect(send(TOOL)?.payload.state).toBe('working')
+    expect(server.getStatusSnapshot()[0]).toMatchObject({
+      state: 'working',
+      model: TURN_START.model,
+      providerSession: { id: TURN_START.session_id },
+      toolName: 'write',
+      mainAgent: { state: 'working' }
+    })
   })
 
   it('drops other-session tools and end events without changing root identity or caches', () => {
@@ -247,6 +253,7 @@ describe.each([null, 'ssh-connection'])('Jcode turn lifecycle on host %s', (conn
     expect(send({ ...TURN_END, session_id: 'root' })?.payload.state).toBe('done')
     expect(server.getStatusSnapshot()[0].state).toBe('done')
     expect(state.jcodeTurnByPaneKey.get(PANE)).toMatchObject({ sessionId: 'root', active: false })
+    bindJcodeRootSession(state, PANE, 'worker', 'launch')
     expect(send({ ...TURN_START, session_id: 'worker' })?.payload.state).toBe('working')
     expect(state.jcodeTurnByPaneKey.get(PANE)).toMatchObject({ sessionId: 'worker', active: true })
   })
@@ -264,6 +271,7 @@ describe.each([null, 'ssh-connection'])('Jcode turn lifecycle on host %s', (conn
   it('admits another session when the active turn expires', () => {
     send({ ...TURN_START, session_id: 'root' })
     vi.setSystemTime(Date.now() + AGENT_STATUS_STALE_AFTER_MS)
+    bindJcodeRootSession(state, PANE, 'replacement', 'launch')
     expect(send({ ...TURN_START, session_id: 'replacement' })?.payload.state).toBe('working')
     expect(state.jcodeTurnByPaneKey.get(PANE)).toMatchObject({
       sessionId: 'replacement',
@@ -291,13 +299,15 @@ describe.each([null, 'ssh-connection'])('Jcode turn lifecycle on host %s', (conn
   })
 
   it.each(['missing', 'other-agent', 'identity-only', 'other-session'])(
-    'closes admission even when the host root is %s',
+    'preserves admission when the accepted-row guard fails for %s',
     (rootCase) => {
-      const start = normalizeHookPayload(state, 'jcode', buildBody(TURN_START), 'production')
+      const start = send(TURN_START)
       if (!start) {
         throw new Error('missing normalized start')
       }
-      if (rootCase !== 'missing') {
+      if (rootCase === 'missing') {
+        deleteLegacyAgentStatus(state, PANE)
+      } else {
         seedLegacyAgentStatusForTests(state, {
           ...start,
           hostEvidenceObservedAt: Date.now(),
@@ -309,11 +319,14 @@ describe.each([null, 'ssh-connection'])('Jcode turn lifecycle on host %s', (conn
           payload: { ...start.payload, agentType: rootCase === 'other-agent' ? 'claude' : 'jcode' }
         })
       }
-      expect(normalizeHookPayload(state, 'jcode', buildBody(SESSION_END), 'production')).toBeNull()
-      expect(state.jcodeTurnByPaneKey.get(PANE)?.active).toBe(false)
       const caches = cacheSnapshot(state)
-      expect(normalizeHookPayload(state, 'jcode', buildBody(LATE_TOOL), 'production')).toBeNull()
+      expect(send(SESSION_END)).toBeNull()
+      expect(state.jcodeTurnByPaneKey.get(PANE)?.active).toBe(true)
       expect(cacheSnapshot(state)).toEqual(caches)
+      clearPaneCacheState(state, PANE)
+      expect(state.jcodeSessions.bindings.size).toBe(0)
+      expect(state.jcodeRootPayloadByPaneKey.size).toBe(0)
+      expect(send(LATE_TOOL)).toBeNull()
     }
   )
 
@@ -334,6 +347,10 @@ describe.each([null, 'ssh-connection'])('Jcode turn lifecycle on host %s', (conn
     }
     server.ingestRemote(previous, connectionId)
     expect(server.getStatusSnapshot()[0].state).toBe('working')
+    if (connectionId === null) {
+      // Main hydrates local snapshots; relay listeners have no snapshot seed.
+      seedJcodeStateFromSnapshot(state, PANE, previous)
+    }
     expect(state.jcodeTurnByPaneKey.has(PANE)).toBe(false)
     expect(send(ending)?.payload).toMatchObject({ state: 'done', model: ending.model })
     expect(server.getStatusSnapshot()[0]).toMatchObject({
@@ -425,13 +442,13 @@ describe.each([null, 'ssh-connection'])('Jcode turn lifecycle on host %s', (conn
 describe('Jcode execution-host title cancellation', () => {
   const WORK = '🌐 jcode/castle Skunk · +2 -1 · work ~10s'
   const LAST = '🌐 jcode/castle Skunk · +2 -1 · last ~10s'
-  let server: AgentHookServer
+  let server: LifecycleServer
   let state: HookListenerState
 
   beforeEach(() => {
     vi.useFakeTimers()
     vi.setSystemTime(1_000)
-    server = new AgentHookServer()
+    server = new LifecycleServer()
     state = server._getStateForTests()
   })
 
@@ -444,11 +461,7 @@ describe('Jcode execution-host title cancellation', () => {
     payload: Record<string, unknown> = TURN_START,
     overrides: Partial<AgentHookEventPayload> = {}
   ) {
-    const event = normalizeHookPayload(state, 'jcode', buildBody(payload), 'production')
-    if (event) {
-      server.ingestRemote({ ...event, ...overrides }, overrides.connectionId ?? null)
-    }
-    return event
+    return server.acceptJcode(payload, overrides)
   }
 
   function arm() {

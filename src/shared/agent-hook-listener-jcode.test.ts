@@ -1,5 +1,5 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
-import { mkdtempSync, rmSync } from 'node:fs'
+import { mkdirSync, mkdtempSync, rmSync, writeFileSync } from 'node:fs'
 import { tmpdir } from 'node:os'
 import { join } from 'node:path'
 import {
@@ -11,16 +11,12 @@ import {
   paneHasStateClaims,
   type HookListenerState
 } from './agent-hook-listener/listener-state'
-import { normalizeHookPayload } from './agent-hook-listener'
-import { PANE_KEY } from './agent-hook-listener-test-harness'
+import { normalizeHookPayload, prepareJcodeHookPayload } from './agent-hook-listener'
+import { normalizeAndAccept, PANE_KEY } from './agent-hook-listener-test-harness'
+import { settleJcodeRootTurn } from './agent-hook-listener/providers/jcode-events'
 
 function ingest(state: HookListenerState, payload: Record<string, unknown>) {
-  return normalizeHookPayload(
-    state,
-    'jcode',
-    { paneKey: PANE_KEY, payload: { hook_event_name: payload.event, ...payload } },
-    'production'
-  )
+  return normalizeAndAccept(state, 'jcode', { hook_event_name: payload.event, ...payload })
 }
 
 function cacheSnapshot(state: HookListenerState) {
@@ -29,17 +25,26 @@ function cacheSnapshot(state: HookListenerState) {
 
 describe('shared agent-hook-listener: jcode', () => {
   let state: HookListenerState
-  let jcodeHome: string
+  let home: string
 
   beforeEach(() => {
-    jcodeHome = mkdtempSync(join(tmpdir(), 'orca-jcode-hooks-'))
-    vi.stubEnv('JCODE_HOME', jcodeHome)
     state = createHookListenerState()
+    home = mkdtempSync(join(tmpdir(), 'orca-jcode-root-'))
+    vi.stubEnv('JCODE_HOME', home)
+    mkdirSync(join(home, 'sessions'))
+    // Negative controls: existing pane-only cases now have explicit root ownership.
+    for (let id = 1; id <= 9; id++) {
+      const sessionId = `session_jc_${id}`
+      writeFileSync(
+        join(home, 'sessions', `${sessionId}.json`),
+        JSON.stringify({ id: sessionId, parent_id: null, status: 'Active' })
+      )
+    }
   })
 
   afterEach(() => {
     vi.unstubAllEnvs()
-    rmSync(jcodeHome, { recursive: true, force: true })
+    rmSync(home, { recursive: true, force: true })
   })
 
   it('maps turn_start to working before any tool has run', () => {
@@ -278,6 +283,10 @@ describe('shared agent-hook-listener: jcode', () => {
   })
 
   it.each(['pre_tool', 'post_tool'])('drops orphan %s before touching caches', (event) => {
+    writeFileSync(
+      join(home, 'sessions', 'orphan.json'),
+      JSON.stringify({ id: 'orphan', parent_id: null, status: 'Active' })
+    )
     const baseline = cacheSnapshot(state)
     expect(
       ingest(state, {
@@ -348,11 +357,34 @@ describe('shared agent-hook-listener: jcode', () => {
     expect(cacheSnapshot(state)).toEqual(baseline)
   })
 
+  it('admits one late turn_end after cancel settlement without a second completion', () => {
+    ingest(state, { event: 'turn_start', session_id: 'session_jc_1' })
+    const turn = state.jcodeTurnByPaneKey.get(PANE_KEY)
+    if (!turn) {
+      throw new Error('Missing turn')
+    }
+    expect(settleJcodeRootTurn(state, PANE_KEY, turn.sessionId, turn.revision)?.state).toBe('done')
+    const late = {
+      event: 'turn_end',
+      session_id: 'session_jc_1',
+      last_assistant_text: 'final reply',
+      status: 'ok'
+    }
+    const event = ingest(state, late)
+    expect(event?.payload).toMatchObject({ state: 'done', lastAssistantMessage: 'final reply' })
+    expect(event?.hookEventName).toBeUndefined()
+    expect(event?.hasExplicitPrompt).toBeUndefined()
+    expect(event?.turnEndedAt).toBeUndefined()
+    expect(state.jcodeTurnByPaneKey.get(PANE_KEY)?.active).toBe(false)
+    expect(ingest(state, { ...late, last_assistant_text: 'duplicate' })).toBeNull()
+  })
+
   it('keeps revisions unique through copied listener views', () => {
-    ingest({ ...state }, { event: 'turn_start', session_id: 'session_jc_1' })
+    const body = { paneKey: PANE_KEY, payload: { event: 'turn_start', session_id: 'session_jc_1' } }
+    prepareJcodeHookPayload({ ...state }, body, 'production')?.commit()
     const first = state.jcodeTurnByPaneKey.get(PANE_KEY)?.revision
     clearPaneCacheState(state, PANE_KEY)
-    ingest({ ...state }, { event: 'turn_start', session_id: 'session_jc_1' })
+    prepareJcodeHookPayload({ ...state }, body, 'production')?.commit()
     expect(state.jcodeTurnByPaneKey.get(PANE_KEY)?.revision).toBeGreaterThan(first ?? 0)
   })
 })

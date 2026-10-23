@@ -20,10 +20,7 @@ import { extractPromptText } from './agent-hook-listener/prompt-fields'
 import { normalizeProviderEvent } from './agent-hook-listener/provider-dispatch'
 import { hasExplicitUserPrompt } from './agent-hook-listener/provider-event-routing'
 import { hasExplicitAmpPrompt } from './agent-hook-listener/providers/amp-events'
-import {
-  settleJcodeRootTurn,
-  shouldIgnoreJcodeEvent
-} from './agent-hook-listener/providers/jcode-events'
+import { prepareJcodeHookPayload } from './agent-hook-listener/jcode-hook-preparation'
 import {
   isOpenCodeSharedServerPost,
   resolveOpenCodeSharedServerEnvelope,
@@ -33,6 +30,13 @@ import {
 import { claudeRowHasUnlistedLiveWork } from './agent-hook-listener/providers/claude-pane-hold-evidence'
 import { readString } from './agent-hook-listener/tool-input-preview'
 import { readPaneProviderSession } from './agent-hook-listener/pane-provider-session'
+
+export {
+  prepareJcodeHookPayload,
+  prepareJcodeRootSettlement,
+  type PreparedJcodeHook
+} from './agent-hook-listener/jcode-hook-preparation'
+
 /** Canonical transport-agnostic normalization entry shared by main and relay listeners. */
 const CLAUDE_EXIT_SESSION_END_REASONS = new Set([
   'prompt_input_exit',
@@ -48,6 +52,9 @@ export function normalizeHookPayload(
   expectedEnv: string,
   options: HookNormalizationOptions = {}
 ): AgentHookEventPayload | null {
+  if (source === 'jcode') {
+    return prepareJcodeHookPayload(state, body, expectedEnv)?.event ?? null
+  }
   const envelope = parseHookEnvelope(state, source, body, expectedEnv)
   if (!envelope) {
     return null
@@ -66,16 +73,8 @@ export function normalizeHookPayload(
   const eventName =
     readFirstString(record, ['hook_event_name', 'hookEventName', 'hook_type', 'hookType']) ??
     hookPayloadRecord.hook_event_name ??
-    hookPayloadRecord.hookEventName ??
-    // Only jcode posts lifecycle under event; other providers may use that field for unrelated data.
-    (source === 'jcode' ? hookPayloadRecord.event : undefined)
+    hookPayloadRecord.hookEventName
   const providerSession = readPaneProviderSession(state, source, stampedPaneKey, hookPayloadRecord)
-  if (
-    source === 'jcode' &&
-    shouldIgnoreJcodeEvent(state, eventName, stampedPaneKey, providerSession?.id)
-  ) {
-    return null
-  }
   if (source === 'opencode' && record.opencodeTui === 1 && !providerSession) {
     return null
   }
@@ -154,12 +153,6 @@ export function normalizeHookPayload(
       providerSession?.id
     )
   ) {
-    if (source === 'jcode' && eventName === 'session_end' && providerSession) {
-      const turn = state.jcodeTurnByPaneKey.get(paneKey)
-      if (turn) {
-        settleJcodeRootTurn(state, paneKey, providerSession.id, turn.revision)
-      }
-    }
     return null
   }
   // Only manual PostCompact clears a turn; auto compaction must not consume its ownership slot.
@@ -240,7 +233,7 @@ export function normalizeHookPayload(
     previousOpenCodeMainAgent: options.previousOpenCodeMainAgent
   })
   const providerSessionOnly =
-    (source === 'pi' || source === 'prime-agent' || source === 'jcode') &&
+    (source === 'pi' || source === 'prime-agent') &&
     eventName === 'session_start' &&
     providerSession !== null
   // A transcript session_start carries resume identity while idle; receivers discard the placeholder row.

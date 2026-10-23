@@ -4,11 +4,12 @@ import {
   type AgentStatusState,
   type ParsedAgentStatusPayload
 } from '../../agent-status-types'
-import { clearPaneTurnCacheState, type HookListenerState } from '../listener-state'
+import type { HookListenerState } from '../listener-state'
 import { resolvePrompt, resolveToolState } from '../prompt-fields'
 import { extractToolFields, isNewTurnEvent } from '../provider-event-routing'
 import { readString } from '../tool-input-preview'
 import { isJcodeUserInputTool } from './jcode-tool-fields'
+import { foldJcodeRootPayload, saveJcodeRootPayload } from './jcode-roster-state'
 
 // Lifecycle mapping follows docs/reference/jcode-hook-events.md; idle session_start takes the early path.
 const JCODE_EVENT_STATES: Record<string, AgentStatusState> = {
@@ -48,6 +49,18 @@ export function shouldIgnoreJcodeEvent(
   if (!turn && (eventName === 'turn_end' || eventName === 'session_end')) {
     return false
   }
+  if (eventName === 'session_end') {
+    return !sessionId || turn?.sessionId !== sessionId
+  }
+  if (
+    eventName === 'turn_end' &&
+    turn &&
+    turn.sessionId === sessionId &&
+    turn.settled &&
+    !turn.lateTurnEndReceived
+  ) {
+    return false
+  }
   return !sessionId || !turn?.active || turn.sessionId !== sessionId
 }
 
@@ -71,23 +84,34 @@ export function settleJcodeRootTurn(
   sessionId: string,
   revision: number
 ): ParsedAgentStatusPayload | null {
-  if (!endJcodeTurn(state, paneKey, sessionId, revision)) {
-    return null
-  }
-  const root = state.lastStatusByPaneKey.get(paneKey)
+  const turn = state.jcodeTurnByPaneKey.get(paneKey)
   if (
-    !root ||
-    root.providerSessionOnly ||
-    root.payload.agentType !== 'jcode' ||
-    root.providerSession?.id !== sessionId
+    state.jcodeSessions.roots.get(paneKey) !== sessionId ||
+    !turn?.active ||
+    turn.sessionId !== sessionId ||
+    turn.revision !== revision
   ) {
     return null
   }
-  return normalizeAgentStatusPayload({
-    ...root.payload,
+  const root = state.jcodeRootPayloadByPaneKey.get(paneKey)
+  const row = state.lastStatusByPaneKey.get(paneKey)
+  if (
+    !root ||
+    !row ||
+    row.providerSessionOnly ||
+    row.payload.agentType !== 'jcode' ||
+    row.providerSession?.id !== sessionId
+  ) {
+    return null
+  }
+  endJcodeTurn(state, paneKey, sessionId, revision)
+  turn.settled = true
+  saveJcodeRootPayload(state, paneKey, {
+    ...root,
     state: 'done',
     interactivePrompt: undefined
   })
+  return foldJcodeRootPayload(state, paneKey)
 }
 
 export function normalizeJcodeEvent(
@@ -104,12 +128,11 @@ export function normalizeJcodeEvent(
     turn.lastActivityAt = now
   }
   if (eventName === 'session_start') {
-    // Idle open/attach/resume must not assert working before input.
-    clearPaneTurnCacheState(state, paneKey)
-    if (sessionId) {
+    // Idle open/attach/resume must not assert working before input or reset an active turn.
+    if (sessionId && !turn) {
       state.jcodeTurnByPaneKey.set(paneKey, {
         sessionId,
-        revision: turn?.revision ?? 0,
+        revision: 0,
         active: false,
         lastActivityAt: now
       })
@@ -124,12 +147,26 @@ export function normalizeJcodeEvent(
       lastActivityAt: now
     })
   }
-  if (eventName === 'session_end' && turn) {
-    return sessionId ? settleJcodeRootTurn(state, paneKey, sessionId, turn.revision) : null
+  if (eventName === 'session_end') {
+    state.jcodeSubagentRosterByPaneKey.delete(paneKey)
+    if (turn?.active && sessionId) {
+      return settleJcodeRootTurn(state, paneKey, sessionId, turn.revision)
+    }
+    const root = state.jcodeRootPayloadByPaneKey.get(paneKey)
+    if (root) {
+      saveJcodeRootPayload(state, paneKey, { ...root, state: 'done', interactivePrompt: undefined })
+      return foldJcodeRootPayload(state, paneKey)
+    }
+  }
+  const lateEnd =
+    eventName === 'turn_end' && turn?.settled && !turn.active && !turn.lateTurnEndReceived
+  if (lateEnd) {
+    turn.lateTurnEndReceived = true
   }
   if (
     eventName === 'turn_end' &&
     turn &&
+    !lateEnd &&
     (!sessionId || !endJcodeTurn(state, paneKey, sessionId, turn.revision))
   ) {
     return null
@@ -155,18 +192,14 @@ export function normalizeJcodeEvent(
   const errorText = hookPayload.status === 'error' ? readString(hookPayload, 'error') : undefined
   // Mark tool errors so stderr does not render as assistant prose in native chat.
   const errorIsToolOutput = errorText !== undefined && eventName === 'post_tool'
-  const previousStatus = state.lastStatusByPaneKey.get(paneKey)
+  const previousRoot = state.jcodeRootPayloadByPaneKey.get(paneKey)
 
-  return normalizeAgentStatusPayload({
+  const payload = normalizeAgentStatusPayload({
     state: stateName,
     prompt: resolvePrompt(state, paneKey, promptText, { resetOnNewTurn }),
     agentType: 'jcode',
     // Keep live model stamps after in-session /model switches.
-    model:
-      readString(hookPayload, 'model') ??
-      (previousStatus?.providerSession?.id === sessionId
-        ? previousStatus?.payload.model
-        : undefined),
+    model: readString(hookPayload, 'model') ?? previousRoot?.model,
     toolName: snapshot.toolName,
     toolInput: snapshot.toolInput,
     interactivePrompt: snapshot.interactivePrompt,
@@ -175,4 +208,9 @@ export function normalizeJcodeEvent(
       ? true
       : snapshot.lastAssistantMessageIsToolOutput
   })
+  if (!payload) {
+    return null
+  }
+  saveJcodeRootPayload(state, paneKey, payload)
+  return foldJcodeRootPayload(state, paneKey)
 }

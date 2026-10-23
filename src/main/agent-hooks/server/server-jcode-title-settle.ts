@@ -1,4 +1,4 @@
-import { settleJcodeRootTurn } from '../../../shared/agent-hook-listener/providers/jcode-events'
+import { prepareJcodeRootSettlement } from '../../../shared/agent-hook-listener/jcode-hook-preparation'
 import {
   getJcodeTerminalTitleActivity,
   getJcodeTerminalTitleStatus
@@ -8,6 +8,7 @@ import type { EnrichedAgentHookEventPayload } from './server-types'
 import { AgentHookServerRowOwnership } from './server-row-ownership'
 import { isValidPaneKey } from './server-status-identity'
 import { PaneTimers } from './program-status/pane-timers'
+import { JcodeSubagentExpiryTimers } from '../../../shared/jcode-subagent-expiry-timers'
 
 const JCODE_TITLE_SETTLE_GRACE_MS = 2_000
 
@@ -24,10 +25,12 @@ type JcodeTitleCandidate = Pick<
 export abstract class AgentHookServerJcodeTitleSettle extends AgentHookServerRowOwnership {
   private readonly jcodeTitleCandidates = new Map<string, JcodeTitleCandidate>()
   private readonly jcodeTitleTimers = new PaneTimers()
+  private readonly jcodeSubagentExpiry = new JcodeSubagentExpiryTimers(this.state)
 
   protected clearJcodeTitleInference(): void {
     this.jcodeTitleTimers.clear()
     this.jcodeTitleCandidates.clear()
+    this.jcodeSubagentExpiry.clearAll()
   }
 
   private resetJcodeTitle(paneKey: string): void {
@@ -120,26 +123,34 @@ export abstract class AgentHookServerJcodeTitleSettle extends AgentHookServerRow
     if (!current || !this.canWriteLegacyStatusRow(current.row)) {
       return
     }
-    const payload = settleJcodeRootTurn(
+    const prepared = prepareJcodeRootSettlement(
       this.state,
       paneKey,
       current.candidate.sessionId,
       current.candidate.revision
     )
-    if (payload) {
+    if (prepared) {
       const row = current.row
-      this.applyNormalizedStatus({
-        paneKey,
-        tabId: row.tabId,
-        worktreeId: row.worktreeId,
-        connectionId: row.connectionId,
-        providerSession: row.providerSession,
-        launchToken: row.launchToken,
-        terminalHandle: row.terminalHandle,
-        hostTurnRevision: row.hostTurnRevision,
-        source: row.source,
-        payload
-      })
+      this.applyNormalizedStatus(
+        {
+          paneKey,
+          tabId: row.tabId,
+          worktreeId: row.worktreeId,
+          connectionId: row.connectionId,
+          providerSession: row.providerSession,
+          launchToken: row.launchToken,
+          terminalHandle: row.terminalHandle,
+          hostTurnRevision: row.hostTurnRevision,
+          source: row.source,
+          payload: prepared.payload
+        },
+        undefined,
+        'hook',
+        undefined,
+        undefined,
+        false,
+        prepared.commit
+      )
     }
   }
 
@@ -148,6 +159,13 @@ export abstract class AgentHookServerJcodeTitleSettle extends AgentHookServerRow
     after: EnrichedAgentHookEventPayload | null | undefined,
     emit = true
   ): boolean {
+    if (after) {
+      this.jcodeSubagentExpiry.arm(after.paneKey, (row) => {
+        if (this.server && this.statusHooksEnabled) {
+          this.applyNormalizedStatus(row)
+        }
+      })
+    }
     if (before && before.paneKey !== after?.paneKey) {
       this.resetJcodeTitle(before.paneKey)
       if (after) {
