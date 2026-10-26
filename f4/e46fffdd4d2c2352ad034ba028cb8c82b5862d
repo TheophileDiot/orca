@@ -1,0 +1,205 @@
+src/renderer/src/components/sidebar/worktree-card-compact-agent-row.tsx
+  s_e348b9e3da0ae1::t_f9ef16a023736e 3,242,244,268
+src/shared/jcode-terminal-title.ts
+  s_e348b9e3da0ae1::t_ecdef83070947e 14-15,18
+  s_cad7bfc91fcdaf::t_67d7944c48b9b7 16-17,19,23-25
+  s_cad7bfc91fcdaf::t_be129f9494cf9c 20-22
+src/renderer/src/components/dashboard/AgentRowTurnMetrics.test.tsx
+  s_e348b9e3da0ae1::t_4665b88ecbd60c 110-113
+  s_d4c95129c78a49::t_8196ee3f9f9e8c 91
+  s_e348b9e3da0ae1::t_ecdef83070947e 89,116,122,128,149,171,179,194
+  s_c374d8e280bf5b::t_7e8449add6e332 32-37,39-40
+  s_c374d8e280bf5b::t_fd20548f997627 61
+  s_c374d8e280bf5b::t_73466d8fafa545 104-106
+  s_c374d8e280bf5b::t_b28858592428c2 1-31,38,41-60,62-88,90,92-103,107-109,114-115,117-121,123-127,129-148,150-170,172-178,180-186,190-193,195-203
+  s_41d80c5648f2ae::t_e4f1d71445aabd 187-189
+src/renderer/src/i18n/locales/ja.json
+  s_c374d8e280bf5b::t_35699663763c95 18241-18249
+src/renderer/src/components/dashboard/AgentRowTurnMetrics.tsx
+  s_c374d8e280bf5b::t_e4d82a1ac5505d 1-12,15-17,19-43,51-66,75-77,79-87,89-97,99-100
+  s_c374d8e280bf5b::t_73466d8fafa545 44-50
+  s_41d80c5648f2ae::t_e4f1d71445aabd 13-14,18,67-68,70-74,78,98
+  s_e348b9e3da0ae1::t_ecdef83070947e 88
+  s_d4c95129c78a49::t_f777c4a3d03c67 69
+src/renderer/src/i18n/locales/pt.json
+  s_c374d8e280bf5b::t_35699663763c95 18918-18926
+src/wsl-guest/agent-hook-jcode-usage.test.ts
+  s_83e0208d9189d2::t_39043d01843134 90-94,126-128
+  s_83e0208d9189d2::t_39024847a7720f 1-56,58-71,73-89,95-99,101-116,129-134
+  s_83e0208d9189d2::t_b70dfbed1a8efa 117,119-125
+  s_e348b9e3da0ae1::t_ecdef83070947e 57,72,100,118
+src/renderer/src/store/slices/agent-status-live-facts.ts
+  s_770c714d9b93de::t_856f01e3b722ce 3,76
+src/renderer/src/store/slices/agent-status-tool-assistant-fields.spec.ts
+  s_770c714d9b93de::t_e71d1092b2752b 8-22,30-66
+  s_1644cdf340ae44::t_fd6e7a3e0c8e58 67
+src/renderer/src/runtime/web-session-tabs-sync/state-equality-core.ts
+  s_770c714d9b93de::t_856f01e3b722ce 7,66
+src/shared/agent-turn-usage.test.ts
+  s_e348b9e3da0ae1::t_ecdef83070947e 1-46
+src/shared/agent-hook-listener-jcode-usage.test.ts
+  s_e348b9e3da0ae1::t_4665b88ecbd60c 63-93
+  s_eb06d959734149::t_5ad949b2cd0b1e 103-105,133-135,175-177
+  s_e348b9e3da0ae1::t_ecdef83070947e 48,56,96,115,126,141,154,171
+  s_eb06d959734149::t_8b01f0fbb0dc79 1-47,49-55,57-62,94-95,97-102,106-114,116-125,127-132,136-140,142-153,155-170,172-174,178-184
+  s_1644cdf340ae44::t_8b3fd8df3a800a 185-189
+src/shared/agent-turn-usage.ts
+  s_3f4f0dc88fdf20::t_d05015c973a6ac 3,5-6,8,10,12-27,32-50,60-65
+  s_3f4f0dc88fdf20::t_1abff60d52763e 28-31,51-59
+  s_e348b9e3da0ae1::t_ecdef83070947e 1-2,4,7,9,11
+src/shared/jcode-terminal-title.test.ts
+  s_cad7bfc91fcdaf::t_d9a406b23405d6 5,28-60
+src/renderer/src/components/dashboard/use-agent-row-conversation-name.ts
+  s_cad7bfc91fcdaf::t_02d504fb665e22 15,30,36-41
+src/renderer/src/components/dashboard/use-agent-row-jcode-diff-stat.ts
+  s_cad7bfc91fcdaf::t_02d504fb665e22 1,3-13,17,21-25,28-31
+  s_e348b9e3da0ae1::t_ecdef83070947e 2,26-27
+  s_cad7bfc91fcdaf::t_be129f9494cf9c 14-16,18-20
+src/renderer/src/store/slices/agent-status-live-entry-builder.ts
+  s_770c714d9b93de::t_856f01e3b722ce 232
+src/renderer/src/i18n/locales/zh.json
+  s_c374d8e280bf5b::t_35699663763c95 18241-18249
+src/renderer/src/runtime/sync-runtime-graph/agent-status-projection.ts
+  s_770c714d9b93de::t_856f01e3b722ce 53
+src/shared/agent-hook-listener-jcode-usage-fixtures.ts
+  s_eb06d959734149::t_3d6528c716c561 1-14,20-21,27-28,40-41,55-56,62-63,75-76,89-90,96-113
+  s_1644cdf340ae44::t_a760c9cda19da3 15-19,22-26,29-39,42-54,57-61,64-74,77-88,91-95
+src/shared/agent-status-types.test.ts
+  s_3f4f0dc88fdf20::t_ef408ed8efdbce 876-911
+src/shared/agent-status-types.ts
+  s_3f4f0dc88fdf20::t_d05015c973a6ac 10,51,113,193,244,358,366-367
+  s_e348b9e3da0ae1::t_ecdef83070947e 112,192
+src/main/agent-hooks/server-last-status-restored-children.test.ts
+  s_83e0208d9189d2::t_39024847a7720f 7,113-151
+  s_e348b9e3da0ae1::t_ecdef83070947e 112
+  s_1644cdf340ae44::t_5fafe127622da2 152-153
+src/renderer/src/components/dashboard/DashboardAgentRow.test.tsx
+  s_c374d8e280bf5b::t_7e8449add6e332 12-16,134-159
+src/main/agent-hooks/server-jcode-usage.test.ts
+  s_e348b9e3da0ae1::t_ecdef83070947e 43,63
+  s_83e0208d9189d2::t_39024847a7720f 1-42,44-62,64-91
+src/shared/agent-hook-listener/providers/jcode-turn-usage.ts
+  s_eb06d959734149::t_5ad949b2cd0b1e 4-7
+  s_eb06d959734149::t_33643013b21b79 1-3,8-20
+src/shared/agent-status-store-status-codec.test.ts
+  s_3f4f0dc88fdf20::t_ef408ed8efdbce 1,3-22,24-29,31-32,52-53
+  s_3f4f0dc88fdf20::t_1abff60d52763e 33-35
+  s_3f4f0dc88fdf20::t_e822deafdebf62 2,36,38-46,48-51
+  s_e348b9e3da0ae1::t_ecdef83070947e 23,30,37,47
+src/renderer/src/hooks/ipc-events/normalize-agent-status-event.test.ts
+  s_770c714d9b93de::t_e71d1092b2752b 2,6-34
+src/renderer/src/runtime/web-session-tabs-sync/state-equality-core.test.ts
+  s_770c714d9b93de::t_e71d1092b2752b 33-56
+src/renderer/src/components/sidebar/worktree-card-compact-agent-row.stable-message.test.tsx
+  s_c374d8e280bf5b::t_7e8449add6e332 15-19,83-104
+src/renderer/src/hooks/ipc-events/normalize-agent-status-event.ts
+  s_770c714d9b93de::t_856f01e3b722ce 17
+src/wsl-guest/agent-hook-envelope-publication.test.ts
+  s_e348b9e3da0ae1::t_ecdef83070947e 175
+  s_83e0208d9189d2::t_39024847a7720f 10,176-187
+  s_1644cdf340ae44::t_290d2b13dd3d72 188-192
+src/shared/agent-hook-listener/jcode-hook-preparation.ts
+  s_eb06d959734149::t_33643013b21b79 159,163-168
+src/renderer/src/components/dashboard/DashboardAgentRow.tsx
+  s_e348b9e3da0ae1::t_f9ef16a023736e 13,291-292,305,311
+src/renderer/src/i18n/locales/fr.json
+  s_c374d8e280bf5b::t_35699663763c95 18345-18353
+src/renderer/src/i18n/locales/ko.json
+  s_c374d8e280bf5b::t_35699663763c95 18241-18249
+src/shared/agent-hook-listener/providers/jcode-events.ts
+  s_eb06d959734149::t_33643013b21b79 13,218-219
+src/renderer/src/runtime/sync-runtime-graph-agent-status-projection.test.ts
+  s_770c714d9b93de::t_e71d1092b2752b 50,87-105
+src/renderer/src/i18n/locales/es.json
+  s_c374d8e280bf5b::t_35699663763c95 18236-18244
+src/renderer/src/i18n/locales/en.json
+  s_1644cdf340ae44::t_00a67cd848fd48 18603-18611
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "f4e46fffdd4d2c2352ad034ba028cb8c82b5862d",
+  "prompts": {},
+  "sessions": {
+    "s_1644cdf340ae44": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "702be6ae-7377-47f3-8abb-00c71c60dbd2",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "TheophileDiot <tdiot@bunkerity.com>"
+    },
+    "s_3f4f0dc88fdf20": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a17723-f3b4-7e12-b67d-5f439e9aaf9d",
+        "model": "gpt-6.1-sol"
+      },
+      "human_author": "TheophileDiot <tdiot@bunkerity.com>"
+    },
+    "s_41d80c5648f2ae": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a17779-b276-70b2-a624-031ff6f871b1",
+        "model": "gpt-6.1-sol"
+      },
+      "human_author": "TheophileDiot <tdiot@bunkerity.com>"
+    },
+    "s_770c714d9b93de": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a17731-eb20-7362-b835-480c4d8e34bb",
+        "model": "gpt-6.1-sol"
+      },
+      "human_author": "TheophileDiot <tdiot@bunkerity.com>"
+    },
+    "s_83e0208d9189d2": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a1773e-1b98-7631-9192-622008a900ae",
+        "model": "gpt-6.1-sol"
+      },
+      "human_author": "TheophileDiot <tdiot@bunkerity.com>"
+    },
+    "s_c374d8e280bf5b": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a17734-7c2e-7172-941b-60cb589e42f7",
+        "model": "gpt-6.1-sol"
+      },
+      "human_author": "TheophileDiot <tdiot@bunkerity.com>"
+    },
+    "s_cad7bfc91fcdaf": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a1772a-7cef-7250-bf5d-4ecf2437ca95",
+        "model": "gpt-6.1-sol"
+      },
+      "human_author": "TheophileDiot <tdiot@bunkerity.com>"
+    },
+    "s_d4c95129c78a49": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a177b6-5986-7ce3-ae92-ed64a4e20e60",
+        "model": "gpt-6.1-sol"
+      },
+      "human_author": "TheophileDiot <tdiot@bunkerity.com>"
+    },
+    "s_e348b9e3da0ae1": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a1779b-1d92-76c1-bf4f-69c9bf9a3b2e",
+        "model": "gpt-6.1-sol"
+      },
+      "human_author": "TheophileDiot <tdiot@bunkerity.com>"
+    },
+    "s_eb06d959734149": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a1772a-784a-7531-bd55-8956780a3a48",
+        "model": "gpt-6.1-sol"
+      },
+      "human_author": "TheophileDiot <tdiot@bunkerity.com>"
+    }
+  }
+}
