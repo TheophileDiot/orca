@@ -1,24 +1,31 @@
 src/main/jcode/hook-service-read-failure.test.ts
   s_49f9b4522c8e46::t_6ae71dd71ee874 1-16,18-71,73-111
   s_49f9b4522c8e46::t_592dcb07134b3e 72
+  s_7b25d51867c251::t_2ccb84a9c000aa 17
 src/main/jcode/hook-service.test.ts
   s_2540424957e342::t_bcea41c8f2b337 2-13,404-406,471-505,507-515
   s_2540424957e342::t_1bc820d7f200d0 34-35,37-52,257-303,315-403,516
   s_2540424957e342::t_2bb19fec796787 304-314
   s_49f9b4522c8e46::t_6ae71dd71ee874 407-463,465-470,517
   s_49f9b4522c8e46::t_146675a599ba8d 464
+  s_7b25d51867c251::t_2ccb84a9c000aa 36,506
 src/main/agent-hooks/remote-hook-service-installers-jcode.test.ts
   s_2540424957e342::t_87024843505f2c 1-15,17-131,163
   s_49f9b4522c8e46::t_1f8d5fc62760a6 132-162
+  s_7b25d51867c251::t_2ccb84a9c000aa 16
 src/main/agent-hooks/remote-hook-service-installers-sftp.test-fixture.ts
   s_2540424957e342::t_87024843505f2c 2,4,16,23,31
+  s_7b25d51867c251::t_c51ea38a269dfc 18-21,24-28
+  s_7b25d51867c251::t_83ed258796c261 1,3,5-15,17,22,29-30
 src/main/jcode/hook-text-edits.ts
   s_49f9b4522c8e46::t_dcf6ac5bb0a859 88,92-109
   s_6a3cc52333088e::t_28f34a05e91bde 123-126,140-141
   s_6a3cc52333088e::t_0fe346d143eab6 1-31,32-41,43-86,89-91,110-111,113-122,127-139,142-153,155-161,163-183,185-202
+  s_7b25d51867c251::t_2ccb84a9c000aa 42,87,112,154,162,184
 src/main/jcode/hook-assignment-scan.ts
   s_49f9b4522c8e46::t_3d1d58968fe539 37-38,57,94-95,104
   s_6a3cc52333088e::t_dbe767c51a4ef0 1-36,39-42,44-49,51-56,58-93,96-103,105-203
+  s_7b25d51867c251::t_2ccb84a9c000aa 43,50
 src/main/agent-hooks/remote-hook-service-installers.test.ts
   s_2540424957e342::t_87024843505f2c 29
 src/main/jcode/hook-config.test.ts
@@ -31,6 +38,7 @@ src/main/jcode/hook-config.test.ts
   s_6a3cc52333088e::t_8a5afa02d3a66d 285-297
   s_49f9b4522c8e46::t_7cdc02a91d271b 355-413,417-420
   s_49f9b4522c8e46::t_13f1af06fae830 414-416
+  s_7b25d51867c251::t_2ccb84a9c000aa 17,213
 src/main/jcode/hook-service.ts
   s_49f9b4522c8e46::t_13f1af06fae830 164-167
   s_2540424957e342::t_5fbc9b51ab62d2 6
@@ -38,12 +46,14 @@ src/main/jcode/hook-service.ts
   s_2540424957e342::t_bd055d45585db7 23,25,105,107-110,123,171,175,181-185,188,191,218-224,225,227-238,240-243,245-254,256-265
   s_2540424957e342::t_1632db6bb5451b 1,135-137,139-144,300
   s_49f9b4522c8e46::t_338616e09c11c0 297
+  s_7b25d51867c251::t_2ccb84a9c000aa 179,270,298
 src/main/jcode/hook-config.ts
   s_6a3cc52333088e::t_f24895c3cb84c4 12,21-22,26,28-29,35,42,53,56,65,81-84,86-88,90-93,102-107,111-114,116-118,122-123,125,132-134,137-140,143
   s_49f9b4522c8e46::t_dcf6ac5bb0a859 95-99
   s_6a3cc52333088e::t_cc5424547bb5ac 1,3-10,37-38,41,45-52,54-55,59-64,66,85,136
   s_2540424957e342::t_bd055d45585db7 44
   s_49f9b4522c8e46::t_3d1d58968fe539 14-20,25,27,30,33-34,71
+  s_7b25d51867c251::t_2ccb84a9c000aa 43,94,115
 src/main/agent-hooks/README.md
   s_2540424957e342::t_14a0090d444daa 61
 ---
@@ -74,6 +84,14 @@ src/main/agent-hooks/README.md
         "tool": "claude",
         "id": "e2a337b5-1df8-49e5-a960-d4e812c2cd35",
         "model": "claude-sonnet-5-5"
+      },
+      "human_author": "TheophileDiot <tdiot@bunkerity.com>"
+    },
+    "s_7b25d51867c251": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a17889-4661-75e1-9a0b-d8ffcf92fa99",
+        "model": "gpt-6.1-sol"
       },
       "human_author": "TheophileDiot <tdiot@bunkerity.com>"
     }
