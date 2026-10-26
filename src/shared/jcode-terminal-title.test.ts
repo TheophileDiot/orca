@@ -2,6 +2,7 @@ import { describe, expect, it } from 'vitest'
 import {
   getJcodeTerminalTitleActivity,
   getJcodeTerminalTitleStatus,
+  getJcodeTitleDiffStat,
   isJcodeIdentityTerminalTitle,
   stripJcodeTitleStatus
 } from './jcode-terminal-title'
@@ -23,6 +24,39 @@ const CAPTURED_TITLES = [
 ]
 
 describe('jcode terminal titles', () => {
+  it.each([
+    ['🌐 jcode/castle Skunk · +1 -0 · work ~10s', { added: 1, removed: 0 }],
+    ['🌐 jcode/castle Skunk · +1 -0 · last ~12s', { added: 1, removed: 0 }],
+    ['🌐 jcode/castle Skunk · +2 -1 · work ~4s', { added: 2, removed: 1 }],
+    ['🌐 jcode/castle Skunk · +2 -1 · last ~10s', { added: 2, removed: 1 }],
+    ['🦨 jcode/castle Skunk · work ~0s', null],
+    ['🦨 jcode/castle Skunk', null],
+    ['jcode', null]
+  ])('reads session-cumulative diff counts from captured title %j', (title, expected) => {
+    expect(getJcodeTitleDiffStat(title)).toEqual(expected)
+  })
+
+  it('keeps the previous turn diff at captured turn B start', () => {
+    expect(getJcodeTitleDiffStat('🌐 jcode/castle Skunk · +1 -0 · work ~1s')).toEqual({
+      added: 1,
+      removed: 0
+    })
+  })
+
+  // Mutations: neutral conversation head, missing activity, large/unsafe counts and misplaced stat.
+  it.each([
+    ['🌐 Fix the cache permission error… · +436 -46 · work ~54m24s', { added: 436, removed: 46 }],
+    ['🌐 jcode/castle Skunk · +1 -0', { added: 1, removed: 0 }],
+    ['🌐 jcode/castle Skunk · +999999999 -0 · last ~4s', { added: 999999999, removed: 0 }],
+    [null, null],
+    [undefined, null],
+    ['', null],
+    ['🌐 jcode/castle Skunk · +99999999999999999999 -1', null],
+    ['+3 -1 · jcode/castle Skunk', null]
+  ])('reads only safe terminal diff counts in mutation %j', (title, expected) => {
+    expect(getJcodeTitleDiffStat(title)).toEqual(expected)
+  })
+
   it('strips the live diff and duration segments', () => {
     expect(stripJcodeTitleStatus('jcode Puppy · +3 -0 · last ~23s')).toBe('jcode Puppy')
     expect(stripJcodeTitleStatus('🌐 jcode Puppy · +3 -0 · last ~23s')).toBe('jcode Puppy')

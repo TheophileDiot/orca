@@ -10,6 +10,7 @@ import { extractToolFields, isNewTurnEvent } from '../provider-event-routing'
 import { readString } from '../tool-input-preview'
 import { isJcodeUserInputTool } from './jcode-tool-fields'
 import { foldJcodeRootPayload, saveJcodeRootPayload } from './jcode-roster-state'
+import { parseJcodeTurnUsage } from './jcode-turn-usage'
 
 // Lifecycle mapping follows docs/reference/jcode-hook-events.md; idle session_start takes the early path.
 const JCODE_EVENT_STATES: Record<string, AgentStatusState> = {
@@ -200,6 +201,8 @@ export function normalizeJcodeEvent(
     agentType: 'jcode',
     // Keep live model stamps after in-session /model switches.
     model: readString(hookPayload, 'model') ?? previousRoot?.model,
+    lastTurnUsage:
+      eventName === 'turn_end' ? parseJcodeTurnUsage(hookPayload) : previousRoot?.lastTurnUsage,
     toolName: snapshot.toolName,
     toolInput: snapshot.toolInput,
     interactivePrompt: snapshot.interactivePrompt,

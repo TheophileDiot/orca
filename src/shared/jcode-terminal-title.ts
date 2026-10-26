@@ -11,6 +11,18 @@ const JCODE_TITLE_ACTIVITY_RE = /\s+\u00B7\s+(work|last)\s+~(?:\d+(?:\.\d+)?[dhm
 const JCODE_TITLE_EMOJI_RE = /^[\p{Extended_Pictographic}\u{FE0F}\u{200D}]+\s*/u
 const JCODE_TITLE_DIFF_RE = /\s+\u00B7\s+\+\d+\s+-\d+$/u
 
+export type JcodeDiffStat = { added: number; removed: number }
+
+export function getJcodeTitleDiffStat(title: string | null | undefined): JcodeDiffStat | null {
+  const match = title?.replace(JCODE_TITLE_ACTIVITY_RE, '').match(/\s+·\s+\+(\d+)\s+-(\d+)$/u)
+  if (!match) {
+    return null
+  }
+  const added = Number(match[1])
+  const removed = Number(match[2])
+  return Number.isSafeInteger(added) && Number.isSafeInteger(removed) ? { added, removed } : null
+}
+
 /** The jcode title with its per-session emoji and live diff/duration segments removed. */
 export function stripJcodeTitleStatus(title: string): string {
   return title

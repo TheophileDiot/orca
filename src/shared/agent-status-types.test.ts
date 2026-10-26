@@ -846,3 +846,39 @@ describe('the main agent field on a status payload', () => {
     expect(mainAgentStatusEqual(mainAgent, undefined)).toBe(false)
   })
 })
+
+describe('lastTurnUsage', () => {
+  const usage = {
+    inputTokens: 616,
+    outputTokens: 138,
+    cacheReadTokens: 85906,
+    cacheWriteTokens: 589,
+    durationMs: 12632
+  }
+
+  it('keeps lastTurnUsage through normalize, JSON parse and the client-visible pick', () => {
+    const parsed = parseAgentStatusPayload(
+      JSON.stringify({ state: 'done', prompt: '', agentType: 'jcode', lastTurnUsage: usage })
+    )
+    expect(parsed?.lastTurnUsage).toEqual(usage)
+    expect(pickParsedAgentStatusPayload(parsed!).lastTurnUsage).toEqual(usage)
+  })
+  it.each([
+    ['string numbers', { inputTokens: '616', outputTokens: '138' }],
+    ['missing output', { inputTokens: 616 }],
+    ['negative', { inputTokens: -1, outputTokens: 1 }],
+    ['fractional', { inputTokens: 1.5, outputTokens: 1 }],
+    ['null', { inputTokens: null, outputTokens: 1 }],
+    ['unsafe', { inputTokens: Number.MAX_SAFE_INTEGER + 1, outputTokens: 1 }],
+    ['array', [616, 138]]
+  ])('drops unusable usage: %s', (_name, bad) => {
+    expect(
+      normalizeAgentStatusPayload({ state: 'done', prompt: '', lastTurnUsage: bad })
+    ).not.toHaveProperty('lastTurnUsage')
+  })
+  it('adds no key to an old-shape payload', () => {
+    const parsed = normalizeAgentStatusPayload({ state: 'done', prompt: 'x' })
+    expect(parsed).not.toHaveProperty('lastTurnUsage')
+    expect(pickParsedAgentStatusPayload(parsed!)).not.toHaveProperty('lastTurnUsage')
+  })
+})

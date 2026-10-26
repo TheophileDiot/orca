@@ -165,10 +165,16 @@ export function prepareJcodeHookPayload(
         return null
       }
       const providerSessionOnly = eventName === 'session_start'
+      const carried = draft.jcodeRootPayloadByPaneKey.get(paneKey)?.lastTurnUsage
       const payload =
         dispatched.payload ??
         (providerSessionOnly
-          ? normalizeAgentStatusPayload({ state: 'done', prompt: '', agentType: 'jcode' })
+          ? normalizeAgentStatusPayload({
+              state: 'done',
+              prompt: '',
+              agentType: 'jcode',
+              ...(carried ? { lastTurnUsage: carried } : {})
+            })
           : null)
       if (payload) {
         event = {
