@@ -1,0 +1,860 @@
+src/shared/jcode-terminal-title.test.ts
+  s_59e49a66b61f2b::t_b97afaf2b3bc3b 3,85-97,104,137
+  s_a34fc9f8b98209::t_712da125d2eed0 103
+  s_a34fc9f8b98209::t_263d502f1e81cb 126
+  s_a34fc9f8b98209::t_b47a61e3ce2ff2 109-115
+  s_a34fc9f8b98209::t_adae3536d4c704 2,4,6-9,83-84,98-102,105-108,116-125,127-136,138-139
+  s_cad7bfc91fcdaf::t_d9a406b23405d6 5,27-59
+src/shared/agent-hook-listener/listener-state.ts
+  s_a49720d2396515::t_f0b709b76fcb6f 63
+  s_a49720d2396515::t_09a0ac0b28d745 59,153,249,263
+  s_5bed0e28ce8a0a::t_47c22671e2e337 26-28,30,60,149,215,256
+  s_bb37222f10f2b0::t_6f10bd4a59e4b3 210-214
+  s_f6bc7f68b0960e::t_1a31a05c479daa 190
+  s_59c8c057738ab8::t_7c881e1e6c5fe6 61-62,154-155,264-265
+  s_bb37222f10f2b0::t_a2837bd2765376 25
+src/main/agent-hooks/server/server-status-inference.ts
+  s_59e49a66b61f2b::t_3714afdffbcd39 20,27
+src/shared/agent-process-recognition.test.ts
+  s_5d9de068d5cd26::t_919aa2770dba29 16,67
+  s_e466b13773f2d9::t_d836a2cc639211 14,31-42,34-45,47-53,50-56
+  s_422d7f63101554::t_af5f68ad89b9ce 16-26,19-29,28-30,31-33,43-46,46-49,54-59,57-62,61-63,64-66,65-71,68-71
+  s_422d7f63101554::t_be146cd2554296 15,17-18
+  s_422d7f63101554::t_f4c7db37dc3f00 27,30,60,63
+src/main/jcode/hook-service.ts
+  s_d5761c32747182::t_a93c4c4d710b4b 52,82-84
+src/main/agent-hooks/server/server-status-hook-lifecycle.ts
+  s_59e49a66b61f2b::t_3714afdffbcd39 14
+src/main/runtime/construction/runtime-construction.ts
+  s_59e49a66b61f2b::t_3714afdffbcd39 55,248
+src/shared/agent-hook-listener/hook-pane-identity.ts
+  s_a49720d2396515::t_2f57da50943d95 21-35,38-39
+  s_a49720d2396515::t_b8babe792f7319 1-3,5-9,13-20,40-41
+src/shared/jcode-terminal-title.ts
+  s_59e49a66b61f2b::t_b97afaf2b3bc3b 57,59-63,66,68
+  s_a34fc9f8b98209::t_55ae468f5fa872 10
+  s_a34fc9f8b98209::t_dd49acff8d2500 9,11-12,28-32,64-65,67,69-73
+  s_a34fc9f8b98209::t_adae3536d4c704 58
+  s_a34fc9f8b98209::t_e5b73ba5e34e35 1-8,36-44,48-56
+  s_e348b9e3da0ae1::t_ecdef83070947e 14-15,18
+  s_cad7bfc91fcdaf::t_67d7944c48b9b7 16-17,19,23-25
+  s_cad7bfc91fcdaf::t_be129f9494cf9c 20-22
+src/shared/agent-title-status.ts
+  s_a34fc9f8b98209::t_e5b73ba5e34e35 273-274
+  s_3e658966e80caa::t_92d3a22fd163c6 275
+  s_a34fc9f8b98209::t_dd49acff8d2500 3
+src/shared/agent-hook-listener.ts
+  s_a49720d2396515::t_e1d6aa70266660 2,9,53
+  s_a49720d2396515::t_b8babe792f7319 10
+  s_59c8c057738ab8::t_43ffd4d39afcdf 33-39
+  s_59c8c057738ab8::t_64467982d821fb 23,55-57,76,236
+src/shared/agent-title-identity.ts
+  s_a34fc9f8b98209::t_dd49acff8d2500 2,110
+src/main/agent-hooks/server/server-jcode-title-settle.ts
+  s_59e49a66b61f2b::t_3714afdffbcd39 6-10,12-27,29-32,34-42,46-71,74-101,103-107,109-122,124-125,127-131,133,154-161,169-179
+  s_59e49a66b61f2b::t_019c77623a4518 43-45,72-73
+  s_59e49a66b61f2b::t_b97afaf2b3bc3b 2-5,108
+  s_59e49a66b61f2b::t_33af670b45ad50 102,123
+  s_bb37222f10f2b0::t_3011bfa1264219 11,28,33,162-168
+  s_f6bc7f68b0960e::t_967a3e3a49bef8 1,126,132,134-153
+src/main/runtime/terminal/output/terminal-title-classification.ts
+  s_59e49a66b61f2b::t_fb58b092ff1c94 1-5,18-38
+src/main/runtime/orca-runtime-tests/terminal-handles-and-agent-status-part-04.spec.ts
+  s_422d7f63101554::t_af5f68ad89b9ce 404,422-428,433-443,475-490,492-496,499-503,510-524,529-531,533-535
+  s_422d7f63101554::t_ed893e9c923e95 504-509
+  s_422d7f63101554::t_be146cd2554296 526-528
+  s_67106c583ea5b2::t_0f8669b7317ec0 536
+  s_422d7f63101554::t_40518b57fa876d 429-432,491,525,532
+  s_422d7f63101554::t_f4c7db37dc3f00 444-473
+src/shared/agent-hook-listener/hook-normalization-options.ts
+  s_a49720d2396515::t_e1d6aa70266660 1-13
+src/shared/agent-hook-listener/providers/jcode-events.ts
+  s_a49720d2396515::t_09a0ac0b28d745 24-29,42,65-74,78-87,99,116-117,125-126,134,139-144,149-150,166
+  s_a49720d2396515::t_980eb52e1b2a93 112-114
+  s_68199a1059fe34::t_fd2de2c376ae3d 2,31-36,127-130,137-138,147-148
+  s_a49720d2396515::t_81b1b8e9bae06e 43-46,100,135,145,167-168,172
+  s_a49720d2396515::t_f0b709b76fcb6f 39-41,47-52,75-77,95-96,105-107,146,169,171
+  s_e466b13773f2d9::t_7c0cae78b37583 30,37-38
+  s_59c8c057738ab8::t_8fab78c8ef6d2a 7,12,53-55,63-64,88,97,108-111,115,133,151-155,170,196,198,217-218
+  s_59c8c057738ab8::t_657173aec41087 136
+  s_59c8c057738ab8::t_e15909c9e0a85a 101-104
+  s_f6bc7f68b0960e::t_550b66550b5a97 159
+  s_f6bc7f68b0960e::t_a1cd530e62d562 156
+  s_59c8c057738ab8::t_f9d783808548c8 56-62,89-94,161-165,203,214-216
+  s_f6bc7f68b0960e::t_5ba2b178104c95 157-158,160
+  s_59c8c057738ab8::t_f0f61470ea21cc 98
+  s_3954928ab7b737::t_cecb5f2d35424f 14
+  s_eb06d959734149::t_33643013b21b79 13,204-205
+src/main/runtime/runtime-mobile-agent-status-builder.test.ts
+  s_e466b13773f2d9::t_97d61935af83fb 37-48,53-81,83
+  s_e466b13773f2d9::t_86db3339dfd8ed 19-36,49-52,82,84
+src/main/agent-hooks/server-jcode-turn-lifecycle.test.ts
+  s_59e49a66b61f2b::t_0b42ccd3ea5cb4 585,586,590-593,591-594,595-596,596-597,640-646,641-647
+  s_a49720d2396515::t_fc42a1c7b892f2 313,314
+  s_59e49a66b61f2b::t_5789c37122bc0b 6-7,440-444,441-444,446-450,452-460,452-459,465-495,465-494,505-510,506-511,515-518,516-519,520-527,521-528,536-549,537-550,559-570,560-571,589,590,601-604,602-605,619,620,626-631,627-632,647-651,648-652,670,671,676,677,678,679,698-699,699-700,701,702
+  s_68199a1059fe34::t_073b03da73410f 22,259-273,260-273,275-299,275-298
+  s_a49720d2396515::t_41de1091ea8ae2 70-73,71-74,119,120,126,127,130,131,147,148,151,152,179,180,185,186
+  s_59e49a66b61f2b::t_1a13ea646b6d57 460-463,461-463,511-514,512-515,528-535,529-536,571-584,572-585,586-588,587-589,597-600,598-601,605-618,606-619,620-625,621-626,632-639,633-640,652-669,653-670,671-675,672-676,677,678,679-697,680-698,700,701,702,703
+  s_a49720d2396515::t_2e81c1d7c6e19e 367-389,368-390
+  s_e466b13773f2d9::t_4a8f955b93029f 235-242,236-243
+  s_e466b13773f2d9::t_d836a2cc639211 190,191,231-234,232-235,243-255,244-255,257-259,257-258,299-300,300-301,519,520,550-558,551-559
+  s_59e49a66b61f2b::t_7713b462eb9eb8 594,595
+  s_a49720d2396515::t_be6ce3cf00a0d5 303,315-318,316-319,334-339,335-340,344-346,345-347,356-360,357-361,411-420,412-421,425-435,426-436
+  s_59e49a66b61f2b::t_8dc057355b4110 495-504,496-505
+  s_a49720d2396515::t_245b891d24debd 1-2,10-11,14,17-18,20,23,31,54-55,55,69-70,69,74,76-80,82-91,97-98,106-113,107-114,118,119,120-121,121-122,127-129,128-130,131-141,132-142,149-150,150-151,152-154,153-155,157-163,158-163,173-179,173-178,180,181,184,185,186-189,187-190,192,193,194-195,195-196,202-203,203-204,207-211,208-212,219-228,220-229,439,440,703
+  s_a49720d2396515::t_43b4dfa8c9b615 106,196-201,197-202
+  s_a49720d2396515::t_861cf8ae0751fe 13,16,148,149,229-230,230-231,301,305-307,311-313,311-312,314,315,319-321,320-321,322,325,330-334,330-333,340-343,341-344,347-349,348-349,354-356,354-355,361-366,362-367,390-410,391-411,421-424,422-425,436-438,437-439
+  s_a49720d2396515::t_81b1b8e9bae06e 54,114-117,115-118,122-125,123-126,142-146,143-147,181-183,182-184,212-218,213-219
+  s_a49720d2396515::t_f6dc26db0da9e7 12,19,155-156,156-157,191,192,193,194,204-206,205-207
+  s_f6bc7f68b0960e::t_5ba2b178104c95 39-41,92-94,103-105
+  s_f6bc7f68b0960e::t_a270233438c945 3-5,8-9,15,32-38,42-51,53,56-68,75,81,95-96,99-102,165,256,274,302,304,308-310,323-324,326-329,445,451,464
+  s_f6bc7f68b0960e::t_79d8aef11e28bf 350-353
+  s_f6bc7f68b0960e::t_9f5547ed6b495f 24-29
+  s_f6bc7f68b0960e::t_a1cd530e62d562 21,164,166-172
+  s_bb37222f10f2b0::t_2652b41d5d8ccd 30,52
+src/shared/agent-title-evidence.ts
+  s_a34fc9f8b98209::t_e5b73ba5e34e35 18,279
+src/shared/published-pane-agent-identity.test.ts
+  s_422d7f63101554::t_af5f68ad89b9ce 29-42
+src/main/runtime/runtime-mobile-agent-status-builder.ts
+  s_e466b13773f2d9::t_b7c38cdffc924c 87-89,91-99
+  s_e466b13773f2d9::t_4a8f955b93029f 201-203
+  s_a34fc9f8b98209::t_55ae468f5fa872 132
+  s_a34fc9f8b98209::t_e5b73ba5e34e35 7,86,101-104,107
+  s_e466b13773f2d9::t_7c0cae78b37583 100,229
+  s_a34fc9f8b98209::t_1e91fade1d3612 6,8,79-85,131,199-200,228,230-231
+src/shared/agent-hook-listener-jcode.test.ts
+  s_a49720d2396515::t_e1d6aa70266660 321,324,331,341,343
+  s_a49720d2396515::t_41de1091ea8ae2 22-25,290,301
+  s_a49720d2396515::t_81b1b8e9bae06e 291-300,306-311,326-330,332-340
+  s_a49720d2396515::t_245b891d24debd 6-8,10-11,66,82,93,116,135,155,166,190,228,273,277,284-285,302-305,312-320,322-323,325,342,344-350
+  s_a49720d2396515::t_861cf8ae0751fe 351-359,382,385-386,388-389
+  s_59c8c057738ab8::t_8ea7778b3da898 14,383-384,387
+  s_59c8c057738ab8::t_f9d783808548c8 38-41,286-289,363-365,367-372
+  s_59c8c057738ab8::t_c8122481e11b7b 2-4,15-16,19,28,32-37,42,47,360-362,366,373-379
+  s_59c8c057738ab8::t_090acb707f7d20 380-381
+src/shared/agent-process-recognition.ts
+  s_422d7f63101554::t_e9e77bc8a6ee7d 191
+  s_e466b13773f2d9::t_7c0cae78b37583 79-80
+  s_422d7f63101554::t_621528a4b12fd0 78,81-83
+src/main/agent-hooks/agent-hook-runtime-deps.ts
+  s_59e49a66b61f2b::t_3714afdffbcd39 19
+src/main/jcode/hook-gate-script.test.ts
+  s_d5761c32747182::t_5ccbf8676c8d34 254-256
+  s_d5761c32747182::t_cc06a569b28c15 44-48
+  s_d5761c32747182::t_1c04d1675e1ad4 49-84,91-94,98-99,101,103-119,121
+  s_ccf615bf9aa15c::t_6396933f5d485b 85-90
+  s_d5761c32747182::t_c680068b1cc0f7 95-97
+  s_d5761c32747182::t_cfb55486588397 10,228-229,253,257,313,317
+  s_5d9de068d5cd26::t_919aa2770dba29 102
+  s_d5761c32747182::t_edbea21fdb9dc5 2
+  s_d5761c32747182::t_f2e3dd3ba3fc81 3-9,11-12,100,120,122,251-252,264,288-289,292-312,314
+  s_d5761c32747182::t_9d70e4cb345517 290-291
+src/main/runtime/construction/runtime-construction-dependencies.ts
+  s_59e49a66b61f2b::t_3714afdffbcd39 33
+src/main/runtime/runtime-jcode-title-status.test.ts
+  s_a34fc9f8b98209::t_9afe24f52a2b91 235-248
+  s_e466b13773f2d9::t_4a8f955b93029f 255-260
+  s_a34fc9f8b98209::t_b47a61e3ce2ff2 18-21,49-50,62-63,93,176-182,184-187,196-197,216-234,261-267
+  s_59e49a66b61f2b::t_1a13ea646b6d57 28-30,34-40,303-314,322-345
+  s_e466b13773f2d9::t_97d61935af83fb 203-205
+  s_a34fc9f8b98209::t_07731e66be3649 112,170-173
+  s_e466b13773f2d9::t_d836a2cc639211 215,249-254
+  s_a34fc9f8b98209::t_712da125d2eed0 88-90,145-150
+  s_5d9de068d5cd26::t_919aa2770dba29 275
+  s_59e49a66b61f2b::t_1c0218799cdaeb 2,6-8,22-27,31-33,41-48,54-55,60,65-66,268-274,276-302,315-321,346-372
+  s_e466b13773f2d9::t_86db3339dfd8ed 198-202,206-214
+  s_a34fc9f8b98209::t_263d502f1e81cb 1,3-5,9-17,51-53,56-59,61,64,67-87,91-92,94-111,113-144,151-169,174-175,183,188-195,373
+src/shared/agent-title-evidence.test.ts
+  s_a34fc9f8b98209::t_adae3536d4c704 16-38
+src/shared/terminal-title-agent-type.test.ts
+  s_a34fc9f8b98209::t_4ada002df7e8a5 29-32
+  s_a34fc9f8b98209::t_b47a61e3ce2ff2 5,44-48,60-65,68-69
+  s_a34fc9f8b98209::t_9afe24f52a2b91 66
+  s_a34fc9f8b98209::t_adae3536d4c704 3-4,8,16-28,33-43,49-59,70-71
+  s_a34fc9f8b98209::t_2c419fd81cf0ff 72
+  s_a34fc9f8b98209::t_20df5519547559 67
+src/main/runtime/construction/runtime-host-services.ts
+  s_59e49a66b61f2b::t_fb58b092ff1c94 10,46
+src/main/runtime/terminal/output/terminal-title-observation.ts
+  s_59e49a66b61f2b::t_3714afdffbcd39 102-104,258
+  s_59e49a66b61f2b::t_fb58b092ff1c94 6,13
+src/shared/terminal-title-agent-type.ts
+  s_a34fc9f8b98209::t_dd49acff8d2500 2,192
+src/main/agent-hooks/server/server-lifecycle.ts
+  s_59e49a66b61f2b::t_3714afdffbcd39 252
+  s_f6bc7f68b0960e::t_ea9afd59e74748 144-149
+src/main/runtime/runtime-pty-foreground-agent.ts
+  s_422d7f63101554::t_e9e77bc8a6ee7d 1-4,6,172-179
+  s_422d7f63101554::t_621528a4b12fd0 165
+src/main/runtime/construction/runtime-agent-status-bindings.ts
+  s_59e49a66b61f2b::t_fb58b092ff1c94 1-34,36-39,40-43
+src/main/runtime/jcode-title-status.ts
+  s_a34fc9f8b98209::t_dffaccc8ae4f2f 1-3,5-18,20-21,23-27,29,33-39,41-43,46-47
+  s_e466b13773f2d9::t_7c0cae78b37583 4,22,28,30-32,44
+  s_a34fc9f8b98209::t_a34af163ca2011 45
+  s_a34fc9f8b98209::t_20df5519547559 19,40
+src/shared/jcode-session-files.test.ts
+  s_5bed0e28ce8a0a::t_daa85318c204e3 76,78-84
+  s_df619694951cca::t_0e75647c15f2fc 27-62,64-69,98-122,134,138-142,146,150-157,161-163,172-198,202-220
+  s_5bed0e28ce8a0a::t_6d82bed2e3677b 6-8,13-21,63,70-75,77,85-97
+  s_df619694951cca::t_db1708b4a4f42c 123-133,135-137,143-145,147-149,158-160,164-165,168-171,199-201
+  s_df619694951cca::t_4c443c565ad54d 166-167
+src/main/agent-hooks/server/server-cleanup.ts
+  s_f6bc7f68b0960e::t_be1478da3b983e 307-308
+src/main/agent-hooks/server-jcode-turn-lifecycle-fixtures.ts
+  s_f6bc7f68b0960e::t_9f5547ed6b495f 1-2,4-10,12-20,22-26,28-40,42-48,50-59
+  s_bb37222f10f2b0::t_ecc8981f2a688c 3,11,21,27,41,49
+src/shared/jcode-session-metadata-cache.ts
+  s_5bed0e28ce8a0a::t_4ab2037b5bb5a4 1-37
+src/main/agent-hooks/server/server-persistence-validation.ts
+  s_f6bc7f68b0960e::t_c00878182ba83d 21,135
+src/shared/agent-hook-relay.test.ts
+  s_963cb59878eb1b::t_a5b1bb92af9aff 9-10,54-62,64,83-85,89-90,104
+  s_963cb59878eb1b::t_111bf7adcf2833 63,94-103
+  s_963cb59878eb1b::t_29528e74ae22d6 65-82,86-88,91-93
+  s_963cb59878eb1b::t_e89dc884f0fc44 105
+src/shared/jcode-subagent-roster.ts
+  s_bb37222f10f2b0::t_ecc8981f2a688c 113
+  s_bb37222f10f2b0::t_3011bfa1264219 4,22,53,100-101,111-112,114
+  s_59c8c057738ab8::t_f9d783808548c8 10-13,40-42,45-49,54-56,69-77,79-80,82-84,99,102-105,107-110
+  s_963cb59878eb1b::t_f584f4810f1163 78,115-116
+  s_59c8c057738ab8::t_7c881e1e6c5fe6 1-3,5-9,14-21,23-39,43-44,50-52,57-68,81,85-98,106,117-120
+src/shared/agent-hook-listener-jcode-swarm.test.ts
+  s_bb37222f10f2b0::t_8acca6f41f3430 516
+  s_59c8c057738ab8::t_ab769f225de60b 527-530,533-535
+  s_59c8c057738ab8::t_9e305409716fb4 142,618-620,623-624,635,641-648,654-657
+  s_bb37222f10f2b0::t_ecc8981f2a688c 376-404
+  s_bb37222f10f2b0::t_a1564850e8a569 375
+  s_59c8c057738ab8::t_4694513e566145 427-429,436-448
+  s_59c8c057738ab8::t_0bab303989fe0e 1-4,10,30,35-44,46,50-54,61-69,77-80,84-105,111-113,116-117,122,127-131,141,143-159,162-164,171-174,178,204-227,232-233,236-241,245,253-256,260-266,270-275,279-284,291-295,300-302,331-335,702-703
+  s_59c8c057738ab8::t_496a48967c109a 430-435
+  s_59c8c057738ab8::t_2d001f5a5c65ca 296-299,306-307,311,315-318,323-326,577-585,591-592
+  s_59c8c057738ab8::t_c77240505158c3 114-115,123-126
+  s_59c8c057738ab8::t_f9d783808548c8 5-9,11-16,18-22,24-25,31-34,47-49,55-60,70-76,81-83,118-121,132-140,229-231,234-235,242-244,246-252,257-259,267-269,276-278,285-290,303-305,308-310,327-330,336-346,412-414,474-479,493-497,542-544,553-560,562-564,566-573,598-609,627-631,663-664
+  s_59c8c057738ab8::t_5145fcb4a86066 106-110,565
+  s_59c8c057738ab8::t_0ea977f7562612 23,26,160-161,165-170,175-177,179-203,504-515,517-526,531-532,536-537
+  s_bb37222f10f2b0::t_c70e217df07ec2 27,347-370,372-374
+  s_bb37222f10f2b0::t_33c32a3a782d1b 371
+  s_f6bc7f68b0960e::t_574dd974a72e54 690
+  s_59c8c057738ab8::t_a90aa9316b4c49 649-653
+  s_59c8c057738ab8::t_8ea7778b3da898 28-29,45,228,405-411,415-426,449-473,480-492,498-503,538-541,545-552,561,574-576,593-597,610-617,621-622,625-626,632-634,636-640,658-662,665-673,676-679,689,691,693-694,697-701
+  s_f6bc7f68b0960e::t_3002418dc507e0 17,674-675,680-688,692,695-696
+  s_59c8c057738ab8::t_e15909c9e0a85a 312-314,319-322,586-590
+src/main/agent-hooks/server/server-status-update.ts
+  s_f6bc7f68b0960e::t_5ba2b178104c95 1,8
+  s_f6bc7f68b0960e::t_ea9afd59e74748 52-53,150,295
+src/main/agent-hooks/server/server-launch-resume-identity.ts
+  s_f6bc7f68b0960e::t_5b53c16344b825 16-17,25,69-70,73-74,80
+  s_f6bc7f68b0960e::t_c8e4e0202f9112 15,39-47,76
+  s_f6bc7f68b0960e::t_5ba2b178104c95 1-14,18-24,26-38,48-61,63-68,71-72,75,77-79
+src/main/agent-hooks/server-jcode-admission.test.ts
+  s_f6bc7f68b0960e::t_5ba2b178104c95 21-23,73-75
+  s_f6bc7f68b0960e::t_09c2aba1ee96c1 76-84,108-142
+  s_f6bc7f68b0960e::t_f053c71b46d76e 1-20,24-46,52-72,85-107,143-144
+  s_f6bc7f68b0960e::t_4f36801b0cb703 47-51
+src/shared/agent-status-subagent-snapshot.ts
+  s_963cb59878eb1b::t_f584f4810f1163 5,8-9,22,57-61,111-112
+src/shared/agent-hook-listener/providers/jcode-tool-fields.ts
+  s_59c8c057738ab8::t_7c881e1e6c5fe6 16
+src/main/agent-hooks/server-launch-resume-identity.test.ts
+  s_f6bc7f68b0960e::t_333e971252ef50 163-208
+src/main/agent-hooks/server/server-ingest-terminal.ts
+  s_f6bc7f68b0960e::t_5b53c16344b825 21
+  s_f6bc7f68b0960e::t_5ba2b178104c95 1-4,22-26,29-37
+src/main/agent-hooks/server/server-ingest-remote.ts
+  s_f6bc7f68b0960e::t_c00878182ba83d 28,156
+src/wsl-guest/agent-hook-request.ts
+  s_f6bc7f68b0960e::t_574dd974a72e54 17,31,37-38,100-106
+  s_e23c52d5d49ce7::t_5ea74737096bc3 107-110
+src/shared/agent-hook-listener-test-harness.ts
+  s_59c8c057738ab8::t_64467982d821fb 1,18-19,23,27-29
+  s_59c8c057738ab8::t_f9d783808548c8 20-22,24-26
+src/shared/agent-status-field-normalization.ts
+  s_963cb59878eb1b::t_f584f4810f1163 13
+src/shared/agent-child-row-model.test.ts
+  s_963cb59878eb1b::t_a5b1bb92af9aff 12,264-266,281,286-289
+  s_963cb59878eb1b::t_c4fab9d851e57b 245-254
+  s_963cb59878eb1b::t_29528e74ae22d6 267-280,282-285
+  s_963cb59878eb1b::t_df511e22d4325d 148-151,240-244,255-263
+  s_963cb59878eb1b::t_9f0c8a0e7fb35c 147
+src/wsl-guest/agent-hook-event-admission.ts
+  s_f6bc7f68b0960e::t_967a3e3a49bef8 35,96
+src/shared/agent-status-types.ts
+  s_963cb59878eb1b::t_f584f4810f1163 15,33
+  s_3f4f0dc88fdf20::t_d05015c973a6ac 8,50,105,175,214,316,325
+  s_e348b9e3da0ae1::t_ecdef83070947e 104,174
+src/shared/agent-status-types.test.ts
+  s_963cb59878eb1b::t_a5b1bb92af9aff 24-25,636-648,650,654-660,665-667,674-675,681-685,689
+  s_963cb59878eb1b::t_29528e74ae22d6 649,651-653,661-664,668-673,686-688
+  s_963cb59878eb1b::t_7ec00e3e6a67ab 690
+  s_3f4f0dc88fdf20::t_ef408ed8efdbce 849-884
+src/shared/agent-hook-listener/jcode-prepared-state.ts
+  s_59c8c057738ab8::t_da9db36092e5c0 1,29-31,120-125
+  s_59c8c057738ab8::t_f9d783808548c8 10-15,21-23,32-36,74-75,78,103-104,108,116-117,130-134,136-139,144-151,159-161
+  s_f6bc7f68b0960e::t_550b66550b5a97 3-7,39-73,109-115,119
+  s_59c8c057738ab8::t_657173aec41087 20
+  s_59c8c057738ab8::t_43ffd4d39afcdf 76-77,84-85,88-89,102,105-107,152
+  s_59c8c057738ab8::t_a90aa9316b4c49 154-155
+  s_59c8c057738ab8::t_2164597522ac89 153,156-158
+  s_59c8c057738ab8::t_44948641b56ba9 2,8-9,16-19,24-28,37-38,79-83,86-87,90-101,118,126-129,135,140-143,162-163
+src/shared/agent-hook-listener/provider-dispatch.ts
+  s_59c8c057738ab8::t_f9d783808548c8 216-219
+src/wsl-guest/agent-hook-jcode-ingress.ts
+  s_f6bc7f68b0960e::t_5ba2b178104c95 41-43
+  s_f6bc7f68b0960e::t_574dd974a72e54 1-40,44-54
+src/shared/agent-hook-listener/hook-envelope.ts
+  s_f6bc7f68b0960e::t_ea9afd59e74748 113-114
+  s_f6bc7f68b0960e::t_5ba2b178104c95 147-153
+src/shared/agent-hook-listener/jcode-hook-preparation.ts
+  s_bb37222f10f2b0::t_6f10bd4a59e4b3 22-23,81-87,89-91,94,99,136-143
+  s_f6bc7f68b0960e::t_ea9afd59e74748 19-21,30-35,110,144-146
+  s_bb37222f10f2b0::t_ecc8981f2a688c 100-107
+  s_f6bc7f68b0960e::t_6bf899a76d9051 45,97-98
+  s_59c8c057738ab8::t_43ffd4d39afcdf 92
+  s_59c8c057738ab8::t_f9d783808548c8 6-10,27-28,36,47-51,53-71,95-96,109,111-112,114,119-128,131-133,135,150,154-163,169-171,178,181-182,184-197
+  s_59c8c057738ab8::t_44948641b56ba9 1-4,11-18,24-26,37-44,46,52,93,108,113,115-118,129-130,134,151-153,167,179-180,183,198-200,204-220
+  s_f6bc7f68b0960e::t_5ba2b178104c95 147-149,164-166,201-203
+  s_bb37222f10f2b0::t_b0ee3bf6f6f7b4 29
+  s_eb06d959734149::t_33643013b21b79 168,172-177
+src/shared/agent-hook-relay.ts
+  s_963cb59878eb1b::t_f584f4810f1163 133-143
+src/main/agent-hooks/server/server-ingest-normalization.ts
+  s_f6bc7f68b0960e::t_6bf899a76d9051 20,27
+  s_f6bc7f68b0960e::t_ea9afd59e74748 4-5,16-19,21-26,28,32,36-39,43-48,52-63,67-71,176-177
+  s_f6bc7f68b0960e::t_5ba2b178104c95 29-31,33-35,40-42,49-51,64-66
+  s_bb37222f10f2b0::t_c24f44f1845a93 178-179
+src/renderer/src/components/sidebar/worktree-subagent-child-rows.test.ts
+  s_963cb59878eb1b::t_a5b1bb92af9aff 5,19-22,43-49,54-58,62-66
+  s_963cb59878eb1b::t_29528e74ae22d6 23-42,50-53,59-61
+src/wsl-guest/agent-hook-jcode-swarm.test.ts
+  s_bb37222f10f2b0::t_ecc8981f2a688c 78-80,88-90
+  s_f6bc7f68b0960e::t_73994bd90d1cbe 109
+  s_f6bc7f68b0960e::t_9cb809fcffb9f1 229-236,241,245-246
+  s_bb37222f10f2b0::t_a1564850e8a569 14,36,65-71,76-77,81-82,87,91,96-99
+  s_f6bc7f68b0960e::t_5ba2b178104c95 43-44,121,150-152,163,165,167-169,201-203
+  s_bb37222f10f2b0::t_a7d58c136b7446 72-75,92-95
+  s_f6bc7f68b0960e::t_8c628ea11b7be0 35,45
+  s_f6bc7f68b0960e::t_b9b3003eeac10d 42,161-162,164,170
+  s_bb37222f10f2b0::t_d809a5c0cac2be 83-86
+  s_f6bc7f68b0960e::t_0315c4ba91aa04 237-240,242-244
+  s_f6bc7f68b0960e::t_48d900eb9a9f90 1-13,15-34,37-41,46-64,100-108,110-120,122-130,145-149,154-160,166,171-200,204-228,247-257
+  s_bb37222f10f2b0::t_a9bed0a83090e4 131-144,153
+src/main/agent-hooks/server/server-hydration.ts
+  s_f6bc7f68b0960e::t_967a3e3a49bef8 12,134-135
+src/shared/agent-hook-listener/jcode-hook-ingress.ts
+  s_f6bc7f68b0960e::t_ea9afd59e74748 1-42
+src/shared/jcode-subagent-expiry-timers.ts
+  s_bb37222f10f2b0::t_ecc8981f2a688c 18-24,45-49,59-61,64-65
+  s_bb37222f10f2b0::t_f816136daa4b0e 62
+  s_bb37222f10f2b0::t_3011bfa1264219 1-17,25-44,50-58,63,66-67
+src/wsl-guest/agent-hook-spool-ingest.ts
+  s_f6bc7f68b0960e::t_574dd974a72e54 14,28-31,47-53
+  s_f6bc7f68b0960e::t_a478029bc4d8ec 64
+  s_68ed275313ac40::t_8c555ba5774fbd 54-55
+src/main/agent-hooks/server/server-status-identity.ts
+  s_f6bc7f68b0960e::t_5ba2b178104c95 2-4,100-102,105,107-117,121-122
+  s_f6bc7f68b0960e::t_64a9e1f45a7bc4 99,106
+  s_f6bc7f68b0960e::t_c00878182ba83d 49-50
+  s_f6bc7f68b0960e::t_81e8725d00ff0b 57
+  s_f6bc7f68b0960e::t_0315c4ba91aa04 54-56,58
+  s_f6bc7f68b0960e::t_c4d8995cabf6e6 123
+src/shared/agent-hook-listener/jcode-session-registry.test.ts
+  s_5bed0e28ce8a0a::t_6f51477690b4e5 131,202,279-281,283,287,299,495,503,536
+  s_bb37222f10f2b0::t_8acca6f41f3430 191,194,730
+  s_5bed0e28ce8a0a::t_200b639dafbcf5 719-721,723-725
+  s_5bed0e28ce8a0a::t_55d94c10974d33 78-80,82-83,97-104,124-126,137-140,157-159,232-234,242-244,507-510,512-517,541-543,660-667,669-670,682-686
+  s_5bed0e28ce8a0a::t_fed531b41f29f1 60-61,70
+  s_5bed0e28ce8a0a::t_316c80bf5796ff 715,717-718,722,726-727
+  s_5bed0e28ce8a0a::t_04c8bb0184c8b8 111,205-216,553-555,598-599,675,716,737
+  s_5bed0e28ce8a0a::t_5d640751fb3cd8 81,195-201,203-204,217-224
+  s_8bdc942253034c::t_9ff437e500efcf 449-452
+  s_5bed0e28ce8a0a::t_f477ea9ba2c28e 1,5-10,66,171-184,668
+  s_5bed0e28ce8a0a::t_ebc01d369b12d2 609-618
+  s_bb37222f10f2b0::t_611fe033eb3680 323-357,481-488,694,699,707-710
+  s_5bed0e28ce8a0a::t_e9bface4bbff30 109-110,112-120,552,560-567,569-587,591-592,596-597,600-608,619-631,637-638,643-657
+  s_8bdc942253034c::t_ab49d6f2602272 358-448,453-480
+  s_5bed0e28ce8a0a::t_26e09337e39739 519,525,588-590,593-595,632-636,639-642
+  s_59c8c057738ab8::t_ecd12edd749edd 45
+  s_5bed0e28ce8a0a::t_1a27d1deb2d6c3 520-524
+  s_bb37222f10f2b0::t_a7d58c136b7446 700-703,711-712
+  s_bb37222f10f2b0::t_ecc8981f2a688c 689-691
+  s_5bed0e28ce8a0a::t_120e0e44300e38 2-4,11-44,46-59,62-65,67-69,71-77,84-96,105-108,121-123,127-130,132-136,141-156,160-170,185-190,192-193,225-231,235-241,245-278,282,284-286,288-298,300-322,489-494,496-502,504-506,511,518,526-535,537-540,544-551,556-559,568,658-659,671-674,676-681,687-688,692-693,695-698,704-706,713-714,728-729,731-736,738-746
+src/shared/agent-hook-listener/providers/jcode-roster-state.ts
+  s_f6bc7f68b0960e::t_5ba2b178104c95 70,72-73,162-166
+  s_59c8c057738ab8::t_7c881e1e6c5fe6 1-3,8-12,14-18,23,27-28,33-43,54-63,74-78,84,88-102,126-127,131-132,160-161,167-169
+  s_f6bc7f68b0960e::t_c8e4e0202f9112 71
+  s_f6bc7f68b0960e::t_967a3e3a49bef8 13,64,67-69,81,83,120-122,155
+  s_59c8c057738ab8::t_a90aa9316b4c49 82
+  s_59c8c057738ab8::t_f9d783808548c8 4-7,19-22,24-26,29,32,44-53,65-66,79-80,85-87,103-119,123-125,128-130,136-154,156-159
+  s_bb37222f10f2b0::t_ecc8981f2a688c 30-31
+  s_59c8c057738ab8::t_43ffd4d39afcdf 133-135
+src/shared/jcode-session-files.ts
+  s_5bed0e28ce8a0a::t_0e5e8db2fe2dbc 44
+  s_df619694951cca::t_db1708b4a4f42c 101
+  s_df619694951cca::t_4c443c565ad54d 77-79,82-84,106,112,121-123,128-130,139-141
+  s_df619694951cca::t_f4657d96751c45 4,6-11,64-76,80-81,85-88,91-96,98-100,102-105,113-120,125-127,131-132,138,142-144
+  s_5bed0e28ce8a0a::t_4ab2037b5bb5a4 13-22
+  s_5bed0e28ce8a0a::t_cc714156df697a 28-30,89-90,97,107-111,124,133-137
+  s_5bed0e28ce8a0a::t_0d145565cd4813 145
+src/shared/agent-hook-owner-presence.ts
+  s_f6bc7f68b0960e::t_ea9afd59e74748 24
+src/main/agent-hooks/server-jcode-swarm.test.ts
+  s_f6bc7f68b0960e::t_333e971252ef50 29,408-415,419-441
+  s_bb37222f10f2b0::t_33c32a3a782d1b 75,347
+  s_f6bc7f68b0960e::t_0bd1762c72a733 332-346
+  s_f6bc7f68b0960e::t_b9b3003eeac10d 35,267-268,272-287,295
+  s_bb37222f10f2b0::t_f1835aca000be0 59,112
+  s_f6bc7f68b0960e::t_574dd974a72e54 384-386
+  s_f6bc7f68b0960e::t_5ba2b178104c95 205,223,288-290,318-322,399-401,416-418
+  s_bb37222f10f2b0::t_353555f12520a4 70,72-74,76-94,96-99,102-104,108,114,118-120
+  s_f6bc7f68b0960e::t_8ae9ebb70f78e6 121-161
+  s_f6bc7f68b0960e::t_73994bd90d1cbe 211
+  s_bb37222f10f2b0::t_a7d58c136b7446 95,109-111
+  s_bb37222f10f2b0::t_5a303acd99c691 113
+  s_bb37222f10f2b0::t_ecc8981f2a688c 53-58,60-69,71,100-101,105-107,115-117
+  s_f6bc7f68b0960e::t_de3b894a9d5862 352
+  s_f6bc7f68b0960e::t_3002418dc507e0 317
+  s_f6bc7f68b0960e::t_8c628ea11b7be0 14,38,357
+  s_f6bc7f68b0960e::t_c614e1e451433b 1-13,15-28,30-34,36-37,39-52,162-201,228-250,254-266,269-271,291-294,296-316,323-331,348-351,353-356,358-383,387-398,402-407,442-444
+  s_f6bc7f68b0960e::t_d6251e4a2b0005 202-204
+  s_f6bc7f68b0960e::t_3a119760316df1 206-210
+  s_f6bc7f68b0960e::t_e9fb8949e616b4 212-214,220-222
+  s_f6bc7f68b0960e::t_f29a88fde231ce 224-227
+  s_f6bc7f68b0960e::t_95ac5a0ece086c 251-253
+  s_a12a2a5f496883::t_6dbebe2517236c 215-219
+src/shared/jcode-subagent-roster.test.ts
+  s_59c8c057738ab8::t_1d424d93ef146c 2-9,11-12,53-58,80-87,92-120
+  s_963cb59878eb1b::t_a5b1bb92af9aff 10,18-22,34-36,48-52
+  s_59c8c057738ab8::t_f9d783808548c8 59-79,88-91
+  s_bb37222f10f2b0::t_8acca6f41f3430 1,13-17
+  s_963cb59878eb1b::t_29528e74ae22d6 23-33,37-47
+src/shared/agent-child-row-model.ts
+  s_963cb59878eb1b::t_c4fab9d851e57b 207-213
+  s_963cb59878eb1b::t_238a289c3c0498 18-20
+  s_963cb59878eb1b::t_77fd1ced889137 194,203-206,214-215
+src/shared/agent-hook-listener/jcode-session-registry.ts
+  s_f6bc7f68b0960e::t_1a31a05c479daa 231-232
+  s_5bed0e28ce8a0a::t_88836562879a9b 67,96-97
+  s_bb37222f10f2b0::t_6f10bd4a59e4b3 98-99,101-103,109,115-116,118
+  s_5bed0e28ce8a0a::t_4ab2037b5bb5a4 14-15,22,25,34-35,65-66,93,193
+  s_5bed0e28ce8a0a::t_82aeda4b8bfcb7 87-88,122-126,131-133,135-140,145-150,181-183,191-192,194-205
+  s_bb37222f10f2b0::t_8acca6f41f3430 105-108
+  s_5bed0e28ce8a0a::t_6626f64b00bf65 2-13,16-21,28-33,160-171,206-219,221-222,225-230,233-276,283-287
+  s_bb37222f10f2b0::t_9a6e7dce54ceca 26-27
+  s_8bdc942253034c::t_97f4de21e5b62c 77-78
+  s_5bed0e28ce8a0a::t_31e89d43346549 1,23-24,36-64,68-70,92,94-95,119-121,127-130,134,141-144,151-153,158-159,172-180,184-190
+  s_5bed0e28ce8a0a::t_0510e23fa43864 110-114,154-157
+  s_5bed0e28ce8a0a::t_aacf74261980f9 223-224
+  s_8bdc942253034c::t_48ad809caa30bc 71-76,80-86,89-91,100,104,117,220,277-282
+src/shared/agent-status-store.test.ts
+  s_963cb59878eb1b::t_111bf7adcf2833 378
+  s_963cb59878eb1b::t_a5b1bb92af9aff 7,375-377,379,402-404,407
+  s_963cb59878eb1b::t_29528e74ae22d6 380-401,405-406
+  s_963cb59878eb1b::t_565456c133e9ce 408-409
+src/wsl-guest/agent-hook-result-retry-scheduler.ts
+  s_bb37222f10f2b0::t_760a9e08040f8a 79-82
+  s_bb37222f10f2b0::t_323c47e55e0c67 74-78
+  s_bb37222f10f2b0::t_2fa64f93e18805 19,38,52,57,71-73,83-87
+src/wsl-guest/agent-hook-provider-normalization.ts
+  s_f6bc7f68b0960e::t_5ba2b178104c95 41-43,48-49,56-65,81-83
+  s_f6bc7f68b0960e::t_550b66550b5a97 47,50
+  s_f6bc7f68b0960e::t_967a3e3a49bef8 23-40,44-46,51-55,66-69
+  s_3954928ab7b737::t_e576f54c61cb6b 4-8
+src/shared/agent-hook-listener/jcode-pending-input-queue.ts
+  s_bb37222f10f2b0::t_6f10bd4a59e4b3 8
+  s_5bed0e28ce8a0a::t_b43f2eb71b9213 1-7,15-29,41-53,61-119
+  s_f6bc7f68b0960e::t_6bf899a76d9051 9-14,30-40,54-60
+src/shared/agent-hook-listener-jcode-swarm-fixtures.ts
+  s_59c8c057738ab8::t_f9d783808548c8 5-9,12-21,24-28,31-41,44-48,51-62,69-72,76-79,83-92,96-99,103-112,115-116,118-126,130-133,137-146,150-153,158-163,167-172
+  s_59c8c057738ab8::t_ecd12edd749edd 68,75,82,95,102,117,129,136,149
+  s_59c8c057738ab8::t_26f33130e7b383 1-4,10-11,22-23,29-30,42-43,49-50,63-67,73-74,80-81,93-94,100-101,113-114,127-128,134-135,147-148,154-157,164-166,173
+src/wsl-guest/agent-hook-server.ts
+  s_bb37222f10f2b0::t_2fa64f93e18805 100
+  s_bb37222f10f2b0::t_3011bfa1264219 281,300
+  s_bb37222f10f2b0::t_760a9e08040f8a 299
+  s_f6bc7f68b0960e::t_574dd974a72e54 140,279,309
+  s_f6bc7f68b0960e::t_a478029bc4d8ec 142,308
+src/shared/agent-hook-listener/jcode-session-ownership.ts
+  s_bb37222f10f2b0::t_9a6e7dce54ceca 74-78,233-276,278-300
+  s_5bed0e28ce8a0a::t_4ab2037b5bb5a4 1-27,30-39,41-51,53-73,79-94,96-128,130-232,301
+  s_8bdc942253034c::t_48ad809caa30bc 29,40,52,95,129,277
+src/shared/agent-hook-listener/providers/jcode-turn-prompt.test.ts
+  s_5bed0e28ce8a0a::t_ddee094fe73c14 7-11
+src/wsl-guest/agent-hook-jcode-admission.test.ts
+  s_f6bc7f68b0960e::t_79d8aef11e28bf 7-8,23-24,55-59,100-106,108-116,120-131
+  s_f6bc7f68b0960e::t_5ba2b178104c95 36-38,138-140,142-144,147-149
+  s_f6bc7f68b0960e::t_f053c71b46d76e 1-6,9-22,25-35,39-54,60-99,132-137,141,145-146,150-178
+  s_f6bc7f68b0960e::t_875df7c0f7c997 107
+  s_f6bc7f68b0960e::t_9108d34d81a897 117-119
+src/main/agent-hooks/server/server-state.ts
+  s_f6bc7f68b0960e::t_81e8725d00ff0b 187-189,191
+  s_f6bc7f68b0960e::t_57954cb02f0209 190
+  s_f6bc7f68b0960e::t_ea9afd59e74748 242-244
+src/shared/agent-child-row-detail.ts
+  s_963cb59878eb1b::t_238a289c3c0498 1-30,32-36,40-80,82-83
+  s_963cb59878eb1b::t_77fd1ced889137 81
+src/renderer/src/components/sidebar/worktree-card-compact-agent-row.tsx
+  s_e348b9e3da0ae1::t_f9ef16a023736e 3,241,266
+src/renderer/src/components/dashboard/AgentRowTurnMetrics.test.tsx
+  s_e348b9e3da0ae1::t_4665b88ecbd60c 110-113
+  s_d4c95129c78a49::t_8196ee3f9f9e8c 91
+  s_e348b9e3da0ae1::t_ecdef83070947e 89,116,122,128,149,171,179,194
+  s_c374d8e280bf5b::t_7e8449add6e332 32-37,39-40
+  s_c374d8e280bf5b::t_fd20548f997627 61
+  s_c374d8e280bf5b::t_73466d8fafa545 104-106
+  s_c374d8e280bf5b::t_b28858592428c2 1-31,38,41-60,62-88,90,92-103,107-109,114-115,117-121,123-127,129-148,150-170,172-178,180-186,190-193,195-203
+  s_41d80c5648f2ae::t_e4f1d71445aabd 187-189
+src/renderer/src/i18n/locales/ja.json
+  s_c374d8e280bf5b::t_35699663763c95 18514,18530-18537
+src/renderer/src/components/dashboard/AgentRowTurnMetrics.tsx
+  s_c374d8e280bf5b::t_e4d82a1ac5505d 1-12,15-17,19-43,51-66,75-77,79-87,89-97,99-100
+  s_c374d8e280bf5b::t_73466d8fafa545 44-50
+  s_41d80c5648f2ae::t_e4f1d71445aabd 13-14,18,68,70-74,78,98
+  s_e348b9e3da0ae1::t_ecdef83070947e 88
+  s_d4c95129c78a49::t_f777c4a3d03c67 69
+src/renderer/src/i18n/locales/pt.json
+  s_c374d8e280bf5b::t_35699663763c95 19104,19120-19127
+src/wsl-guest/agent-hook-jcode-usage.test.ts
+  s_83e0208d9189d2::t_39043d01843134 90-94,126-128
+  s_83e0208d9189d2::t_39024847a7720f 1-56,58-71,73-89,95-99,101-116,129-134
+  s_83e0208d9189d2::t_b70dfbed1a8efa 117,119-125
+  s_e348b9e3da0ae1::t_ecdef83070947e 57,72,100,118
+src/renderer/src/store/slices/agent-status/agent-status-live-facts.ts
+  s_770c714d9b93de::t_856f01e3b722ce 76
+src/renderer/src/store/slices/agent-status-tool-assistant-fields.spec.ts
+  s_770c714d9b93de::t_e71d1092b2752b 8-22,28-64
+  s_1644cdf340ae44::t_fd6e7a3e0c8e58 65
+src/renderer/src/runtime/web-session-tabs-sync/state-equality-core.ts
+  s_770c714d9b93de::t_856f01e3b722ce 7,66
+src/shared/agent-turn-usage.test.ts
+  s_e348b9e3da0ae1::t_ecdef83070947e 1-46
+src/shared/agent-hook-listener-jcode-usage.test.ts
+  s_e348b9e3da0ae1::t_4665b88ecbd60c 63-93
+  s_eb06d959734149::t_5ad949b2cd0b1e 103-105,133-135,175-177
+  s_e348b9e3da0ae1::t_ecdef83070947e 48,56,96,115,126,141,154,171
+  s_eb06d959734149::t_8b01f0fbb0dc79 1-47,49-55,57-62,94-95,97-102,106-114,116-125,127-132,136-140,142-153,155-170,172-174,178-184
+  s_1644cdf340ae44::t_8b3fd8df3a800a 185-189
+src/shared/agent-turn-usage.ts
+  s_3f4f0dc88fdf20::t_d05015c973a6ac 2,4-5,7,9,11-26,31-49,59-64
+  s_3f4f0dc88fdf20::t_1abff60d52763e 27-30,50-58
+  s_e348b9e3da0ae1::t_ecdef83070947e 3,6,8,10
+src/renderer/src/components/dashboard/use-agent-row-conversation-name.ts
+  s_cad7bfc91fcdaf::t_02d504fb665e22 15,30,36-38,39-40
+src/renderer/src/components/dashboard/use-agent-row-jcode-diff-stat.ts
+  s_cad7bfc91fcdaf::t_02d504fb665e22 1,3-13,17,21-25,27-30
+  s_e348b9e3da0ae1::t_ecdef83070947e 2
+  s_cad7bfc91fcdaf::t_be129f9494cf9c 14-16,18-20
+src/renderer/src/store/slices/agent-status/agent-status-live-entry-builder.ts
+  s_770c714d9b93de::t_856f01e3b722ce 229
+src/renderer/src/i18n/locales/zh.json
+  s_c374d8e280bf5b::t_35699663763c95 18514,18530-18537
+src/renderer/src/runtime/sync-runtime-graph/agent-status-projection.ts
+  s_770c714d9b93de::t_856f01e3b722ce 53
+src/shared/agent-hook-listener-jcode-usage-fixtures.ts
+  s_eb06d959734149::t_3d6528c716c561 1-14,20-21,27-28,40-41,55-56,62-63,75-76,89-90,96-113
+  s_1644cdf340ae44::t_a760c9cda19da3 15-19,22-26,29-39,42-54,57-61,64-74,77-88,91-95
+src/main/agent-hooks/server-last-status-restored-children.test.ts
+  s_83e0208d9189d2::t_39024847a7720f 7,112-150
+  s_e348b9e3da0ae1::t_ecdef83070947e 111
+  s_1644cdf340ae44::t_5fafe127622da2 151-152
+src/renderer/src/components/dashboard/DashboardAgentRow.test.tsx
+  s_c374d8e280bf5b::t_7e8449add6e332 12-16,134-159
+src/main/agent-hooks/server-jcode-usage.test.ts
+  s_e348b9e3da0ae1::t_ecdef83070947e 43,63
+  s_83e0208d9189d2::t_39024847a7720f 1-42,44-62,64-91
+src/shared/agent-hook-listener/providers/jcode-turn-usage.ts
+  s_eb06d959734149::t_5ad949b2cd0b1e 4-7
+  s_eb06d959734149::t_33643013b21b79 1-3,8-20
+src/shared/agent-status-store-status-codec.test.ts
+  s_3f4f0dc88fdf20::t_ef408ed8efdbce 1,3-22,24-29,31-32,52-53
+  s_3f4f0dc88fdf20::t_1abff60d52763e 33-35
+  s_3f4f0dc88fdf20::t_e822deafdebf62 2,36,38-46,48-51
+  s_e348b9e3da0ae1::t_ecdef83070947e 23,30,37,47
+src/renderer/src/runtime/web-session-tabs-sync/state-equality-core.test.ts
+  s_770c714d9b93de::t_e71d1092b2752b 33-56
+src/renderer/src/components/sidebar/worktree-card-compact-agent-row.stable-message.test.tsx
+  s_c374d8e280bf5b::t_7e8449add6e332 15-19,83-104
+src/renderer/src/hooks/ipc-events/normalize-agent-status-event.ts
+  s_770c714d9b93de::t_856f01e3b722ce 17
+src/wsl-guest/agent-hook-envelope-publication.test.ts
+  s_e348b9e3da0ae1::t_ecdef83070947e 175
+  s_83e0208d9189d2::t_39024847a7720f 10,176-187
+  s_1644cdf340ae44::t_290d2b13dd3d72 188-192
+src/renderer/src/components/dashboard/DashboardAgentRow.tsx
+  s_e348b9e3da0ae1::t_f9ef16a023736e 16,292,319
+src/renderer/src/i18n/locales/fr.json
+  s_c374d8e280bf5b::t_35699663763c95 18670-18678
+src/renderer/src/i18n/locales/ko.json
+  s_c374d8e280bf5b::t_35699663763c95 18514,18530-18537
+src/renderer/src/runtime/sync-runtime-graph-agent-status-projection.test.ts
+  s_770c714d9b93de::t_e71d1092b2752b 45,82-100
+src/renderer/src/i18n/locales/es.json
+  s_c374d8e280bf5b::t_35699663763c95 18530-18538
+src/renderer/src/i18n/locales/en.json
+  s_1644cdf340ae44::t_00a67cd848fd48 18879,18885-18892
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "9f2e5842998aff5f8c94554ec1e2e447d77cb00a",
+  "prompts": {},
+  "sessions": {
+    "s_1644cdf340ae44": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "702be6ae-7377-47f3-8abb-00c71c60dbd2",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "TheophileDiot <tdiot@bunkerity.com>"
+    },
+    "s_3954928ab7b737": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a16451-59eb-71c0-a618-4b8c95f3662a",
+        "model": "gpt-6.1-sol"
+      },
+      "human_author": "TheophileDiot <tdiot@bunkerity.com>"
+    },
+    "s_3e658966e80caa": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "ae8c7211-338f-442c-a043-975be9a324b0",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "TheophileDiot <tdiot@bunkerity.com>"
+    },
+    "s_3f4f0dc88fdf20": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a17723-f3b4-7e12-b67d-5f439e9aaf9d",
+        "model": "gpt-6.1-sol"
+      },
+      "human_author": "TheophileDiot <tdiot@bunkerity.com>"
+    },
+    "s_41d80c5648f2ae": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a17779-b276-70b2-a624-031ff6f871b1",
+        "model": "gpt-6.1-sol"
+      },
+      "human_author": "TheophileDiot <tdiot@bunkerity.com>"
+    },
+    "s_422d7f63101554": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a1626e-c836-70e2-9e84-50572091b10a",
+        "model": "gpt-6.1-sol"
+      },
+      "human_author": "TheophileDiot <tdiot@bunkerity.com>"
+    },
+    "s_59c8c057738ab8": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a163f6-800e-7c21-8af8-d7fbede78d3e",
+        "model": "gpt-6.1-sol"
+      },
+      "human_author": "TheophileDiot <tdiot@bunkerity.com>"
+    },
+    "s_59e49a66b61f2b": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a162b5-4e2a-7742-8a1a-0c68f3541555",
+        "model": "gpt-6.1-sol"
+      },
+      "human_author": "TheophileDiot <tdiot@bunkerity.com>"
+    },
+    "s_5bed0e28ce8a0a": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a163d1-25eb-7e70-a937-6ba33b140aa1",
+        "model": "gpt-6.1-sol"
+      },
+      "human_author": "TheophileDiot <tdiot@bunkerity.com>"
+    },
+    "s_5d9de068d5cd26": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a17710-df2b-7831-ba37-9946f7cf5573",
+        "model": "gpt-6.1-sol"
+      },
+      "human_author": "TheophileDiot <tdiot@bunkerity.com>"
+    },
+    "s_67106c583ea5b2": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "046935b3-82a2-4ef0-8420-df52a2ae9a7d",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "TheophileDiot <tdiot@bunkerity.com>"
+    },
+    "s_68199a1059fe34": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a162f8-5bb3-7351-8e06-dfb642929267",
+        "model": "gpt-6.1-sol"
+      },
+      "human_author": "TheophileDiot <tdiot@bunkerity.com>"
+    },
+    "s_68ed275313ac40": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a16421-e151-76f0-b66d-5a625ce7deab",
+        "model": "gpt-6.1-sol"
+      },
+      "human_author": "TheophileDiot <tdiot@bunkerity.com>"
+    },
+    "s_770c714d9b93de": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a17731-eb20-7362-b835-480c4d8e34bb",
+        "model": "gpt-6.1-sol"
+      },
+      "human_author": "TheophileDiot <tdiot@bunkerity.com>"
+    },
+    "s_83e0208d9189d2": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a1773e-1b98-7631-9192-622008a900ae",
+        "model": "gpt-6.1-sol"
+      },
+      "human_author": "TheophileDiot <tdiot@bunkerity.com>"
+    },
+    "s_8bdc942253034c": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "f2da3282-3fe7-4c9e-a3d3-62876453e7cf",
+        "model": "claude-sonnet-5-5"
+      },
+      "human_author": "TheophileDiot <tdiot@bunkerity.com>"
+    },
+    "s_963cb59878eb1b": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a16419-e379-7612-a60a-f776ec0e5933",
+        "model": "gpt-6.1-sol"
+      },
+      "human_author": "TheophileDiot <tdiot@bunkerity.com>"
+    },
+    "s_a12a2a5f496883": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a164a6-0729-7411-b344-f32db9f6e11a",
+        "model": "unknown"
+      },
+      "human_author": "TheophileDiot <tdiot@bunkerity.com>"
+    },
+    "s_a34fc9f8b98209": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a1627e-7558-73b0-ad8d-080841dd095c",
+        "model": "gpt-6.1-sol"
+      },
+      "human_author": "TheophileDiot <tdiot@bunkerity.com>"
+    },
+    "s_a49720d2396515": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a162a0-af53-72b3-9696-fea0302d3227",
+        "model": "gpt-6.1-sol"
+      },
+      "human_author": "TheophileDiot <tdiot@bunkerity.com>"
+    },
+    "s_bb37222f10f2b0": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a164a6-0699-7971-bb3b-2706d00c5096",
+        "model": "gpt-6.1-sol"
+      },
+      "human_author": "TheophileDiot <tdiot@bunkerity.com>"
+    },
+    "s_c374d8e280bf5b": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a17734-7c2e-7172-941b-60cb589e42f7",
+        "model": "gpt-6.1-sol"
+      },
+      "human_author": "TheophileDiot <tdiot@bunkerity.com>"
+    },
+    "s_cad7bfc91fcdaf": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a1772a-7cef-7250-bf5d-4ecf2437ca95",
+        "model": "gpt-6.1-sol"
+      },
+      "human_author": "TheophileDiot <tdiot@bunkerity.com>"
+    },
+    "s_ccf615bf9aa15c": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a17727-df44-7872-9947-87e51ada253a",
+        "model": "gpt-6.1-sol"
+      },
+      "human_author": null
+    },
+    "s_d4c95129c78a49": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a177b6-5986-7ce3-ae92-ed64a4e20e60",
+        "model": "gpt-6.1-sol"
+      },
+      "human_author": "TheophileDiot <tdiot@bunkerity.com>"
+    },
+    "s_d5761c32747182": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a162d3-71b0-79b3-8a75-d2e4055749cb",
+        "model": "gpt-6.1-sol"
+      },
+      "human_author": "TheophileDiot <tdiot@bunkerity.com>"
+    },
+    "s_df619694951cca": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a163c7-3047-7d20-88d4-33219f622fdc",
+        "model": "gpt-6.1-sol"
+      },
+      "human_author": "TheophileDiot <tdiot@bunkerity.com>"
+    },
+    "s_e23c52d5d49ce7": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "91e484a1-fc5b-473b-bd02-e2e83b562c35",
+        "model": "claude-sonnet-5-5"
+      },
+      "human_author": "TheophileDiot <tdiot@bunkerity.com>"
+    },
+    "s_e348b9e3da0ae1": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a1779b-1d92-76c1-bf4f-69c9bf9a3b2e",
+        "model": "gpt-6.1-sol"
+      },
+      "human_author": "TheophileDiot <tdiot@bunkerity.com>"
+    },
+    "s_e466b13773f2d9": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a162e8-ef39-7cc2-8d5d-b49be45c8183",
+        "model": "gpt-6.1-sol"
+      },
+      "human_author": "TheophileDiot <tdiot@bunkerity.com>"
+    },
+    "s_eb06d959734149": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a1772a-784a-7531-bd55-8956780a3a48",
+        "model": "gpt-6.1-sol"
+      },
+      "human_author": "TheophileDiot <tdiot@bunkerity.com>"
+    },
+    "s_f6bc7f68b0960e": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a16427-3491-7960-942a-2f05341b50a9",
+        "model": "gpt-6.1-sol"
+      },
+      "human_author": "TheophileDiot <tdiot@bunkerity.com>"
+    }
+  }
+}
