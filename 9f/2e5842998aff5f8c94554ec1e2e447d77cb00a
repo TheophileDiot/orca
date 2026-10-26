@@ -284,6 +284,7 @@ src/shared/agent-status-types.ts
   s_963cb59878eb1b::t_f584f4810f1163 15,33
   s_3f4f0dc88fdf20::t_d05015c973a6ac 8,50,105,175,214,316,325
   s_e348b9e3da0ae1::t_ecdef83070947e 104,174
+  s_f9b54cc4beac3e::t_eba3c9b6d4db4a 324
 src/shared/agent-status-types.test.ts
   s_963cb59878eb1b::t_a5b1bb92af9aff 24-25,636-648,650,654-660,665-667,674-675,681-685,689
   s_963cb59878eb1b::t_29528e74ae22d6 649,651-653,661-664,668-673,686-688
@@ -496,6 +497,7 @@ src/shared/agent-child-row-detail.ts
   s_963cb59878eb1b::t_77fd1ced889137 81
 src/renderer/src/components/sidebar/worktree-card-compact-agent-row.tsx
   s_e348b9e3da0ae1::t_f9ef16a023736e 3,241,266
+  s_f9b54cc4beac3e::t_eba3c9b6d4db4a 239
 src/renderer/src/components/dashboard/AgentRowTurnMetrics.test.tsx
   s_e348b9e3da0ae1::t_4665b88ecbd60c 110-113
   s_d4c95129c78a49::t_8196ee3f9f9e8c 91
@@ -507,14 +509,17 @@ src/renderer/src/components/dashboard/AgentRowTurnMetrics.test.tsx
   s_41d80c5648f2ae::t_e4f1d71445aabd 187-189
 src/renderer/src/i18n/locales/ja.json
   s_c374d8e280bf5b::t_35699663763c95 18514,18530-18537
+  s_5a20241a1f33a4::t_d38f7cc033aa11 18529
 src/renderer/src/components/dashboard/AgentRowTurnMetrics.tsx
   s_c374d8e280bf5b::t_e4d82a1ac5505d 1-12,15-17,19-43,51-66,75-77,79-87,89-97,99-100
   s_c374d8e280bf5b::t_73466d8fafa545 44-50
   s_41d80c5648f2ae::t_e4f1d71445aabd 13-14,18,68,70-74,78,98
   s_e348b9e3da0ae1::t_ecdef83070947e 88
   s_d4c95129c78a49::t_f777c4a3d03c67 69
+  s_f9b54cc4beac3e::t_eba3c9b6d4db4a 67
 src/renderer/src/i18n/locales/pt.json
   s_c374d8e280bf5b::t_35699663763c95 19104,19120-19127
+  s_5a20241a1f33a4::t_d38f7cc033aa11 19119
 src/wsl-guest/agent-hook-jcode-usage.test.ts
   s_83e0208d9189d2::t_39043d01843134 90-94,126-128
   s_83e0208d9189d2::t_39024847a7720f 1-56,58-71,73-89,95-99,101-116,129-134
@@ -522,6 +527,7 @@ src/wsl-guest/agent-hook-jcode-usage.test.ts
   s_e348b9e3da0ae1::t_ecdef83070947e 57,72,100,118
 src/renderer/src/store/slices/agent-status/agent-status-live-facts.ts
   s_770c714d9b93de::t_856f01e3b722ce 76
+  s_5a20241a1f33a4::t_d38f7cc033aa11 3
 src/renderer/src/store/slices/agent-status-tool-assistant-fields.spec.ts
   s_770c714d9b93de::t_e71d1092b2752b 8-22,28-64
   s_1644cdf340ae44::t_fd6e7a3e0c8e58 65
@@ -539,16 +545,19 @@ src/shared/agent-turn-usage.ts
   s_3f4f0dc88fdf20::t_d05015c973a6ac 2,4-5,7,9,11-26,31-49,59-64
   s_3f4f0dc88fdf20::t_1abff60d52763e 27-30,50-58
   s_e348b9e3da0ae1::t_ecdef83070947e 3,6,8,10
+  s_f9b54cc4beac3e::t_eba3c9b6d4db4a 1
 src/renderer/src/components/dashboard/use-agent-row-conversation-name.ts
   s_cad7bfc91fcdaf::t_02d504fb665e22 15,30,36-38,39-40
 src/renderer/src/components/dashboard/use-agent-row-jcode-diff-stat.ts
   s_cad7bfc91fcdaf::t_02d504fb665e22 1,3-13,17,21-25,27-30
   s_e348b9e3da0ae1::t_ecdef83070947e 2
   s_cad7bfc91fcdaf::t_be129f9494cf9c 14-16,18-20
+  s_f9b54cc4beac3e::t_eba3c9b6d4db4a 26
 src/renderer/src/store/slices/agent-status/agent-status-live-entry-builder.ts
   s_770c714d9b93de::t_856f01e3b722ce 229
 src/renderer/src/i18n/locales/zh.json
   s_c374d8e280bf5b::t_35699663763c95 18514,18530-18537
+  s_5a20241a1f33a4::t_d38f7cc033aa11 18529
 src/renderer/src/runtime/sync-runtime-graph/agent-status-projection.ts
   s_770c714d9b93de::t_856f01e3b722ce 53
 src/shared/agent-hook-listener-jcode-usage-fixtures.ts
@@ -583,16 +592,22 @@ src/wsl-guest/agent-hook-envelope-publication.test.ts
   s_1644cdf340ae44::t_290d2b13dd3d72 188-192
 src/renderer/src/components/dashboard/DashboardAgentRow.tsx
   s_e348b9e3da0ae1::t_f9ef16a023736e 16,292,319
+  s_f9b54cc4beac3e::t_eba3c9b6d4db4a 291
+  s_5a20241a1f33a4::t_d38f7cc033aa11 312
 src/renderer/src/i18n/locales/fr.json
   s_c374d8e280bf5b::t_35699663763c95 18670-18678
 src/renderer/src/i18n/locales/ko.json
   s_c374d8e280bf5b::t_35699663763c95 18514,18530-18537
+  s_5a20241a1f33a4::t_d38f7cc033aa11 18529
 src/renderer/src/runtime/sync-runtime-graph-agent-status-projection.test.ts
   s_770c714d9b93de::t_e71d1092b2752b 45,82-100
 src/renderer/src/i18n/locales/es.json
   s_c374d8e280bf5b::t_35699663763c95 18530-18538
 src/renderer/src/i18n/locales/en.json
   s_1644cdf340ae44::t_00a67cd848fd48 18879,18885-18892
+  s_5a20241a1f33a4::t_d38f7cc033aa11 18884
+src/renderer/src/hooks/ipc-events/normalize-agent-status-event-usage.test.ts
+  s_5a20241a1f33a4::t_d38f7cc033aa11 1-34
 ---
 {
   "schema_version": "authorship/3.0.0",
@@ -660,6 +675,14 @@ src/renderer/src/i18n/locales/en.json
       "agent_id": {
         "tool": "codex",
         "id": "01a162b5-4e2a-7742-8a1a-0c68f3541555",
+        "model": "gpt-6.1-sol"
+      },
+      "human_author": "TheophileDiot <tdiot@bunkerity.com>"
+    },
+    "s_5a20241a1f33a4": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a17905-d09d-78e3-b052-cc8be63897dd",
         "model": "gpt-6.1-sol"
       },
       "human_author": "TheophileDiot <tdiot@bunkerity.com>"
@@ -852,6 +875,14 @@ src/renderer/src/i18n/locales/en.json
       "agent_id": {
         "tool": "codex",
         "id": "01a16427-3491-7960-942a-2f05341b50a9",
+        "model": "gpt-6.1-sol"
+      },
+      "human_author": "TheophileDiot <tdiot@bunkerity.com>"
+    },
+    "s_f9b54cc4beac3e": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a17934-a3b6-76c1-a2bc-8395b6edd5ed",
         "model": "gpt-6.1-sol"
       },
       "human_author": "TheophileDiot <tdiot@bunkerity.com>"
