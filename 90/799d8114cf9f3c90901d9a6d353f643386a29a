@@ -30,6 +30,7 @@ src/main/jcode/hook-service.ts
   s_708be9df354612::t_9cef14a898ce3e 255
   s_54868557791156::t_f6684cd90ac0a4 35,178,193
   s_708be9df354612::t_4bd156722821d9 1,251-253
+  s_b1874dd7e2cce6::t_4d5179ef6aa42a 254
 src/main/agent-hooks/server/server-status-hook-lifecycle.ts
   s_59e49a66b61f2b::t_3714afdffbcd39 14
 src/main/runtime/construction/runtime-construction.ts
@@ -190,6 +191,7 @@ src/main/agent-hooks/server/server-lifecycle.ts
   s_7947af8a480243::t_9a42fe4b887ec2 22-23,264
   s_204218ae0037d6::t_09efde1eeb4f29 82
   s_7947af8a480243::t_647b5a8ba86e48 81,83
+  s_b1874dd7e2cce6::t_f9a7af5f0e111e 249
 src/main/runtime/runtime-pty-foreground-agent.ts
   s_422d7f63101554::t_e9e77bc8a6ee7d 1-4,6,172-179
   s_422d7f63101554::t_621528a4b12fd0 165
@@ -501,6 +503,7 @@ src/shared/agent-child-row-detail.ts
   s_963cb59878eb1b::t_77fd1ced889137 81
 src/main/runtime/construction/runtime-service-state.ts
   s_82e5bc5aacb5f8::t_5a90296773511d 127-128
+  s_b1874dd7e2cce6::t_f9a7af5f0e111e 9,48
 src/shared/agent-hook-listener-jcode-display-fixtures.ts
   s_c89236af773402::t_ee8f3500ccb356 3
   s_c89236af773402::t_863666a34045ca 1-2,4-43
@@ -563,6 +566,7 @@ src/main/runtime/runtime-agent-orchestration-external-link.test.ts
   s_82e5bc5aacb5f8::t_e3233abc1c0b88 4,19
   s_82e5bc5aacb5f8::t_372aa9fceedf50 1-3,5-10,16-18,25,34,38-39,45-50,54,64-65,68-71,74,79-84,92-103
   s_82e5bc5aacb5f8::t_9417d7ea5860fb 11,15,21-24,26-28,30-33,35-37,40-44,55-63,66-67,72-73,75-78,85-91
+  s_b1874dd7e2cce6::t_f9a7af5f0e111e 20,29
 src/main/providers/local-pty-spawn.ts
   s_ff6e2c21ba5da7::t_9a3d3f273f9d61 47
 src/main/jcode/jcode-pane-secrets.test.ts
@@ -584,12 +588,14 @@ src/main/jcode/jcode-spawn-tabs.ts
   s_4e785249df8132::t_ef0fbb2af359ff 252-253,272-273
   s_82e5bc5aacb5f8::t_5a90296773511d 1,6-9,13,15,48,52,56-66,73-74,81-82,86-92,95-97,104-106,119-127,135-136,139-141,156-157,162-167,176-179,183-184,188-189,194-195,199,208-211,214-231,233-235,239-240,250-251,261,275-277,282
   s_82e5bc5aacb5f8::t_9417d7ea5860fb 2-5,30-37,44-47,49-51,67-72,93-94,98-100,107-112,128-134,137-138,142-150,152-155,158-161,168-175,180-182,190-193,241-243,245-249,257-260,262-271,289-290,298
+  s_b1874dd7e2cce6::t_4d5179ef6aa42a 232,244
 src/main/ipc/pty/spawn-pane-env.ts
   s_ff6e2c21ba5da7::t_977438303d2a3f 2,14,43,54,65-69,98-102,106-107,109
   s_ff6e2c21ba5da7::t_7bfcdc51dd03db 10-13,88-97
   s_ff6e2c21ba5da7::t_6b93e061630710 114-116
 src/shared/agent-hook-listener/listener-turn-cache-state.ts
   s_c89236af773402::t_4fb74b19265788 1-6,8-13
+  s_b1874dd7e2cce6::t_125ddf8c03c7bf 7
 src/main/jcode/spawn-hook-script.ts
   s_54868557791156::t_6c1fb8f901575e 33-34
   s_467540c35dc491::t_9bd7b676504949 61-64
@@ -624,17 +630,21 @@ src/main/ipc/pty/pty-spawn-env-terminal-basics.test.ts
   s_ff6e2c21ba5da7::t_17b89c67cb24c9 407,412,414
   s_5e07a300c20131::t_b4171fcff3e686 504
   s_5a3323eee527da::t_a8c74f63ad15a9 413,442-452
+  s_b1874dd7e2cce6::t_125ddf8c03c7bf 28
+  s_b1874dd7e2cce6::t_4d5179ef6aa42a 454
 src/shared/jcode-spawn-hook.ts
   s_467540c35dc491::t_68faa75600ce7d 11-12,40,44,47-48,58,62-65
   s_54868557791156::t_f6684cd90ac0a4 1-8,10,13-39,41-43,45-46,49-57,59-61,66-67
   s_7947af8a480243::t_9a42fe4b887ec2 9
 src/main/agent-hooks/server/server-transport-state.ts
   s_7947af8a480243::t_647b5a8ba86e48 1-9,17-25
+  s_b1874dd7e2cce6::t_f9a7af5f0e111e 10-16
 src/main/agent-hooks/server/server-jcode-spawn.ts
   s_204218ae0037d6::t_3706ce0b0aa2e0 19-20,46,55-56,76,80
   s_7947af8a480243::t_9a42fe4b887ec2 3-15,17-18,21,35-45,47-49,53,57-75,77-79,81-89
   s_7947af8a480243::t_647b5a8ba86e48 1-2,16,22-25,27-34,50-52
   s_204218ae0037d6::t_6ae308acf3e7d7 54
+  s_b1874dd7e2cce6::t_4d5179ef6aa42a 26
 src/main/jcode/jcode-spawn-decision.test.ts
   s_7947af8a480243::t_97f3f3e31ab980 1-18,22-30,40-44,54-60,78-82
   s_7947af8a480243::t_db6e88bbe956b2 19-21,31-39,45-53,61-77
@@ -693,12 +703,14 @@ src/main/agent-hooks/server-jcode-display-lifetime.test.ts
 src/main/ipc/pty/pty-pane-restart-replace.test.ts
   s_4e785249df8132::t_ef0fbb2af359ff 3-6
   s_4e785249df8132::t_012907c99ad463 74-82
+  s_b1874dd7e2cce6::t_4d5179ef6aa42a 7
 src/main/ipc/pty/spawn-options-assembly.ts
   s_ff6e2c21ba5da7::t_977438303d2a3f 84,164-166
 src/main/runtime/runtime-agent-orchestration-projection.ts
   s_708be9df354612::t_4bd156722821d9 32,40
   s_82e5bc5aacb5f8::t_64e148f6bf350c 44-46,52,55-57
   s_82e5bc5aacb5f8::t_5a90296773511d 17,39,41-43,47-48,53-54,58-73
+  s_b1874dd7e2cce6::t_340bfd9b491c3a 49-51
 src/main/ipc/pty/ipc/spawn.ts
   s_ff6e2c21ba5da7::t_977438303d2a3f 12
 src/main/ipc/pty/runtime/spawn-state.ts
@@ -714,6 +726,7 @@ src/main/jcode/jcode-spawn-terminal-create.test.ts
   s_82e5bc5aacb5f8::t_ab5be7cc5fffc5 4
   s_82e5bc5aacb5f8::t_c8fe21886bcb52 50-55
   s_5d9de068d5cd26::t_2c563680d10fcc 59
+  s_b1874dd7e2cce6::t_f9a7af5f0e111e 14,19-20,40
 src/main/runtime/orca-runtime-tests/terminal-creation-and-readiness.spec.ts
   s_5a3323eee527da::t_e8ea96fca8fcc4 85
   s_ff6e2c21ba5da7::t_e362e0dec5342b 31-36
@@ -754,6 +767,14 @@ src/main/runtime/runtime-external-parent-links.ts
   s_82e5bc5aacb5f8::t_5a90296773511d 8-17,19-20
   s_82e5bc5aacb5f8::t_465823a6449c75 1-7,21
   s_82e5bc5aacb5f8::t_4f6afb1bdf79db 18
+src/shared/agent-hook-listener/listener-state-types.ts
+  s_b1874dd7e2cce6::t_125ddf8c03c7bf 18,37-38
+src/main/runtime/construction/runtime-external-parent-link-state.ts
+  s_b1874dd7e2cce6::t_f9a7af5f0e111e 1-17
+src/main/ipc/pty/pty-daemon-spawn-session-identity.test.ts
+  s_b1874dd7e2cce6::t_4d5179ef6aa42a 539
+  s_b1874dd7e2cce6::t_125ddf8c03c7bf 18-24
+  s_b1874dd7e2cce6::t_30436913957611 523-538,540-702
 ---
 {
   "schema_version": "authorship/3.0.0",
@@ -973,6 +994,14 @@ src/main/runtime/runtime-external-parent-links.ts
       "agent_id": {
         "tool": "codex",
         "id": "01a162a0-af53-72b3-9696-fea0302d3227",
+        "model": "gpt-6.1-sol"
+      },
+      "human_author": "TheophileDiot <tdiot@bunkerity.com>"
+    },
+    "s_b1874dd7e2cce6": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a17905-b724-79b3-abee-9f2649b1f7d7",
         "model": "gpt-6.1-sol"
       },
       "human_author": "TheophileDiot <tdiot@bunkerity.com>"
