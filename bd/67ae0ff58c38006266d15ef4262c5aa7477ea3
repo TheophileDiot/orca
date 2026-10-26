@@ -1,0 +1,412 @@
+src/main/runtime/construction/runtime-service-state.ts
+  s_82e5bc5aacb5f8::t_5a90296773511d 26-29,115-124,136-137
+src/shared/agent-hook-listener-jcode-display-fixtures.ts
+  s_c89236af773402::t_ee8f3500ccb356 3
+  s_c89236af773402::t_863666a34045ca 1-2,4-43
+src/main/jcode/jcode-spawn-tabs.test.ts
+  s_82e5bc5aacb5f8::t_099ac6a9049501 84-86,473,482
+  s_82e5bc5aacb5f8::t_9417d7ea5860fb 10-13,19-23,26,32-35,40-42,49-58,68-72,94-96,100-104,118-141,156-160,162-172,202-205,214-216,231-238,243-254,257-263,267-270,283-287,290-296,300-301,308-313,324-330,334-335,391-394,398-409,412-417,421-442,445-446,449-450,454-458,462-467,484-485,490-504,517-519,523-526,528-529,532-534
+  s_82e5bc5aacb5f8::t_64e148f6bf350c 83,87,174-182,189-200,271-282,395-397,459-461,510-515
+  s_82e5bc5aacb5f8::t_4d05c7626ce648 183-188,474-481
+  s_82e5bc5aacb5f8::t_d5f6cfbbc804b4 117,142
+  s_48d31b1bc1031e::t_bf985b4513762a 239-240,288-289
+  s_82e5bc5aacb5f8::t_880e9f02c6beda 1-9,14-18,24-25,28-31,36-39,43-48,59-64,66,73-82,88-93,97-99,105-116,143-155,161,173,201,206-213,217-230,241-242,255-256,264-266,297-299,302-307,314-323,331-333,389-390,410-411,418-420,443-444,447-448,451-453,468-472,483,486-489,505-509,516,520-522,527,530-531,535-536
+  s_82e5bc5aacb5f8::t_465823a6449c75 65
+  s_4e785249df8132::t_801d2a0919a9f8 336-355,359-367,371-388
+  s_4e785249df8132::t_ef0fbb2af359ff 356-358,368-370
+  s_4e785249df8132::t_8ba703e3b62c8c 67
+  s_5d9de068d5cd26::t_c5f0c30c2a9054 27
+src/main/jcode/jcode-spawn-decision.ts
+  s_7947af8a480243::t_9a42fe4b887ec2 1-32
+src/main/jcode/hook-service.ts
+  s_467540c35dc491::t_68faa75600ce7d 39
+  s_708be9df354612::t_9cef14a898ce3e 277
+  s_54868557791156::t_f6684cd90ac0a4 36,199,215
+  s_708be9df354612::t_4bd156722821d9 1,273-276
+src/main/jcode/jcode-pane-retirement.test.ts
+  s_708be9df354612::t_efa49329ff522e 56,91-101
+  s_4e785249df8132::t_ef0fbb2af359ff 4-7,10,13-17,26-28,35-36,38-52,114-116,118-120,124-129,133-140,142-144
+  s_708be9df354612::t_4bd156722821d9 18
+  s_4e785249df8132::t_3a9b413c9d2555 8-9,34,37,60-62,130-132
+  s_4e785249df8132::t_8ba703e3b62c8c 25
+  s_48d31b1bc1031e::t_8dd8e96fbfcd83 141
+  s_4e785249df8132::t_801d2a0919a9f8 1-3,11-12,19-24,29-33,53-55,57-59,63-66,82-90,102-113,117,121-123,145
+  s_48d31b1bc1031e::t_bf985b4513762a 67-81
+src/shared/agent-hook-listener-jcode-display.test.ts
+  s_1280df5d19b095::t_72af8ff9017d4a 302,341-345,353-359,465,470-471
+  s_1280df5d19b095::t_698b5542b20f8f 346,352
+  s_c89236af773402::t_863666a34045ca 1-16,21-26,28-47,53-57,64-71,78-105,138-141,151-152,157-164,176-180,182-184,186,188-199,204-219,227-228,238-244,248-253,284-301,303-316,320-328,337-340,360-372,375,381-388,392-418,422-425,430-434,441-454,458,462-463,472-495
+  s_c89236af773402::t_d62e4f20c53ee9 17-20,48-52,58-63,72-77,142-150,153-156,165-175,200-203,220-226,232-237,245-247,254-283,317-319,329-336,376-380,389-391,419-421,426-429,435-440,455-457,459-461,464
+  s_a34bec96b0715c::t_583d879f92f843 120,126,132
+  s_c89236af773402::t_4a1ed111c69781 185,187
+  s_1280df5d19b095::t_92593e0ce3e0da 347-351,466-469
+  s_c89236af773402::t_2776fad32178da 373-374
+  s_c89236af773402::t_20bcb7d9077460 229-231
+  s_a34bec96b0715c::t_611d7bd7930b54 27,106-119,121-125,127-131,133-137
+  s_c89236af773402::t_b9607694e329b6 181
+src/main/providers/local-pty-launch-helpers.ts
+  s_ff6e2c21ba5da7::t_977438303d2a3f 14
+src/main/runtime/orca-runtime-create-terminal-dependencies.ts
+  s_5a3323eee527da::t_01aa51cebb8740 56-58
+  s_ff6e2c21ba5da7::t_6b93e061630710 4,50,53-55
+src/main/agent-hooks/server.ts
+  s_7947af8a480243::t_9a42fe4b887ec2 20
+src/main/jcode/jcode-pane-retirement.ts
+  s_48d31b1bc1031e::t_675148c27ff9a8 67-69
+  s_48d31b1bc1031e::t_c4e92d86da8f34 23-36,46,48-52,59-64,66,70-83
+  s_a34bec96b0715c::t_583d879f92f843 12,54-55
+  s_708be9df354612::t_4bd156722821d9 19,58
+  s_4e785249df8132::t_8ba703e3b62c8c 1-11,13-18,20-22,37-45,47,53,56-57,65,84-85
+src/main/startup/main-process-runtime-service.ts
+  s_82e5bc5aacb5f8::t_5a90296773511d 13
+  s_708be9df354612::t_4bd156722821d9 137
+src/main/runtime/orchestration/db/hot-path-statement-compilation.test.ts
+  s_708be9df354612::t_4bd156722821d9 105-106
+src/main/runtime/runtime-agent-orchestration-external-link.test.ts
+  s_82e5bc5aacb5f8::t_64e148f6bf350c 12-14,50-52
+  s_82e5bc5aacb5f8::t_e3233abc1c0b88 4,19-20
+  s_82e5bc5aacb5f8::t_372aa9fceedf50 1-3,5-10,16-18,25,33,37-38,44-49,53,63-64,67-70,73,78-83,91-102
+  s_82e5bc5aacb5f8::t_9417d7ea5860fb 11,15,21-24,26-32,34-36,39-43,54-62,65-66,71-72,74-77,84-90
+src/main/providers/local-pty-spawn.ts
+  s_ff6e2c21ba5da7::t_9a3d3f273f9d61 48
+src/main/jcode/jcode-pane-secrets.test.ts
+  s_ff6e2c21ba5da7::t_6b93e061630710 58-60,64-66
+  s_5a3323eee527da::t_a8c74f63ad15a9 5-18
+  s_ff6e2c21ba5da7::t_2dd81f49f32874 1-4,19-28,32-57,61-63,67-68
+  s_ff6e2c21ba5da7::t_7bfcdc51dd03db 29-31
+src/main/jcode/jcode-spawn-tabs.ts
+  s_82e5bc5aacb5f8::t_465823a6449c75 11-12,17-29,38,40-41,299
+  s_82e5bc5aacb5f8::t_c8fe21886bcb52 151
+  s_48d31b1bc1031e::t_675148c27ff9a8 201-206
+  s_708be9df354612::t_eee4613811e594 294-297
+  s_4e785249df8132::t_c970235148e8a2 39,280
+  s_82e5bc5aacb5f8::t_64e148f6bf350c 53-55,75-80,84-85,101-103,113-118,185-187,196-198,236-238,254-256
+  s_708be9df354612::t_4bd156722821d9 232,244,285-288
+  s_4e785249df8132::t_5350bce749768f 10,42-43,83,212,274,278-279,281,291
+  s_4e785249df8132::t_561bb14a452fc1 14
+  s_48d31b1bc1031e::t_c4e92d86da8f34 16,200,207,213,283-284,292-293
+  s_4e785249df8132::t_ef0fbb2af359ff 252-253,272-273
+  s_82e5bc5aacb5f8::t_5a90296773511d 1,6-9,13,15,48,52,56-66,73-74,81-82,86-92,95-97,104-106,119-127,135-136,139-141,156-157,162-167,176-179,183-184,188-189,194-195,199,208-211,214-231,233-235,239-240,250-251,261,275-277,282
+  s_82e5bc5aacb5f8::t_9417d7ea5860fb 2-5,30-37,44-47,49-51,67-72,93-94,98-100,107-112,128-134,137-138,142-150,152-155,158-161,168-175,180-182,190-193,241-243,245-249,257-260,262-271,289-290,298
+src/main/ipc/pty/spawn-pane-env.ts
+  s_ff6e2c21ba5da7::t_977438303d2a3f 4,15,45,56,66-70,97-101,105-106,108
+  s_ff6e2c21ba5da7::t_7bfcdc51dd03db 11-14,87-96
+  s_ff6e2c21ba5da7::t_6b93e061630710 113-115
+src/shared/agent-hook-listener/listener-turn-cache-state.ts
+  s_c89236af773402::t_4fb74b19265788 1-12
+src/main/jcode/spawn-hook-script.ts
+  s_54868557791156::t_6c1fb8f901575e 33-34
+  s_467540c35dc491::t_9bd7b676504949 61-64
+  s_467540c35dc491::t_68faa75600ce7d 58,66-70
+  s_54868557791156::t_f6684cd90ac0a4 1-32,35-57,59-60,65,71-73
+src/main/jcode/hook-settings.ts
+  s_54868557791156::t_f6684cd90ac0a4 46,48-57
+  s_708be9df354612::t_4bd156722821d9 47
+src/main/runtime/spawned-pty-env-fixtures.ts
+  s_ff6e2c21ba5da7::t_e362e0dec5342b 2-6,27-32
+src/shared/jcode-spawn-hook.test.ts
+  s_708be9df354612::t_efa49329ff522e 27-29,37-39,92
+  s_467540c35dc491::t_86c5cf0d5a3295 53-56,74-91
+  s_54868557791156::t_6c1fb8f901575e 11-12
+  s_54868557791156::t_64292e441eba22 1-10,13-26,40-52,57-68,70-73,93-110
+  s_467540c35dc491::t_5fab2e310668df 69
+  s_708be9df354612::t_eee4613811e594 30-36
+src/shared/agent-hook-listener/jcode-tab-ownership.ts
+  s_c89236af773402::t_15d8b0502649f4 2
+  s_c89236af773402::t_607c7a2a7b10d2 1,3-29,31-39,50-54,56-81,85-89
+  s_c89236af773402::t_ee8f3500ccb356 55
+  s_1280df5d19b095::t_4554d38649a650 30
+  s_c89236af773402::t_47a371ef124b4b 82-84
+  s_c89236af773402::t_d62e4f20c53ee9 40-49
+src/main/jcode/spawn-hook-env.test.ts
+  s_ff6e2c21ba5da7::t_2dd81f49f32874 1-42
+src/main/ipc/pty-spawn-env-terminal-basics.test.ts
+  s_ff6e2c21ba5da7::t_5b47c18a2d88b5 25,459-460,462-465
+  s_ff6e2c21ba5da7::t_759d6f6bcf38c7 21,466-467,496-497
+  s_ff6e2c21ba5da7::t_e362e0dec5342b 403-406,420-426,429-431,468-495,498
+  s_ff6e2c21ba5da7::t_7bfcdc51dd03db 410-419,427-428,432-436,448-458,461
+  s_ff6e2c21ba5da7::t_17b89c67cb24c9 402,407,409
+  s_5e07a300c20131::t_b4171fcff3e686 499
+  s_5a3323eee527da::t_a8c74f63ad15a9 408,437-447
+src/shared/jcode-spawn-hook.ts
+  s_467540c35dc491::t_68faa75600ce7d 11-12,40,44,47-48,58,62-65
+  s_54868557791156::t_f6684cd90ac0a4 1-8,10,13-39,41-43,45-46,49-57,59-61,66-67
+  s_7947af8a480243::t_9a42fe4b887ec2 9
+src/main/agent-hooks/server/server-transport-state.ts
+  s_7947af8a480243::t_647b5a8ba86e48 1-18
+src/main/agent-hooks/server/server-jcode-spawn.ts
+  s_204218ae0037d6::t_3706ce0b0aa2e0 19-20,26,46,55-56,76,80
+  s_7947af8a480243::t_9a42fe4b887ec2 3-15,17-18,21,35-45,47-49,53,57-75,77-79,81-89
+  s_7947af8a480243::t_647b5a8ba86e48 1-2,16,22-25,27-34,50-52
+  s_204218ae0037d6::t_6ae308acf3e7d7 54
+src/main/jcode/jcode-spawn-decision.test.ts
+  s_7947af8a480243::t_97f3f3e31ab980 1-18,22-30,40-44,54-60,78-82
+  s_7947af8a480243::t_db6e88bbe956b2 19-21,31-39,45-53,61-77
+src/main/jcode/spawn-hook-script.test.ts
+  s_708be9df354612::t_efa49329ff522e 56,91,132,209
+  s_467540c35dc491::t_86c5cf0d5a3295 3,122-131,133-148,189
+  s_54868557791156::t_64292e441eba22 1-2,4-30,34-39,43-45,49-55,57-61,64-90,92-121,149-157,159-167,169-188,190-208,210-218,222-225
+  s_54868557791156::t_ab3020c445f1d1 31-33,40-42,46-48,158,168,219-221
+  s_54868557791156::t_6c1fb8f901575e 62-63
+src/main/jcode/jcode-pane-secrets.ts
+  s_ff6e2c21ba5da7::t_6b93e061630710 11-13
+  s_ff6e2c21ba5da7::t_977438303d2a3f 1-10,14-17,22-23,25-30
+  s_5a3323eee527da::t_01aa51cebb8740 18-21,24
+src/main/ipc/pty-daemon-spawn-session-identity.test.ts
+  s_ff6e2c21ba5da7::t_5b47c18a2d88b5 13-19,426-427,478,490,514,516-519,526,530-533,536,545-547
+  s_ff6e2c21ba5da7::t_e362e0dec5342b 389-394,415-416,430-432,434-474,477
+  s_ff6e2c21ba5da7::t_6b93e061630710 497-499
+  s_ff6e2c21ba5da7::t_759d6f6bcf38c7 475,507-509
+  s_ff6e2c21ba5da7::t_17b89c67cb24c9 418-422,429,433,476
+  s_ff6e2c21ba5da7::t_511f4e8d77971f 548
+  s_ff6e2c21ba5da7::t_7bfcdc51dd03db 369-388,395-414,417,423-425,428,479-489,491-496,500-506,510-513,515,520-525,527-529,534-535,537-544
+src/main/providers/pty-provider-contract.ts
+  s_ff6e2c21ba5da7::t_977438303d2a3f 57-58
+src/main/daemon/pty-subprocess/spawn-environment.ts
+  s_ff6e2c21ba5da7::t_977438303d2a3f 38
+src/main/agent-hooks/README.md
+  s_54868557791156::t_ce62e7e4ddb390 73-86,88-89,95
+  s_467540c35dc491::t_68faa75600ce7d 87,90-94
+  s_708be9df354612::t_09760f666771ee 96-108
+src/main/ipc/pty/ipc/spawn-types.ts
+  s_5a3323eee527da::t_01aa51cebb8740 32
+  s_ff6e2c21ba5da7::t_977438303d2a3f 33
+src/main/runtime/runtime-terminal-contracts.ts
+  s_ff6e2c21ba5da7::t_977438303d2a3f 48-49
+src/main/agent-hooks/server/server-jcode-tabs.ts
+  s_a34bec96b0715c::t_583d879f92f843 8,48-51
+  s_7947af8a480243::t_9a42fe4b887ec2 1-7,9-47,52-61
+src/main/agent-hooks/server/server-listeners.ts
+  s_1280df5d19b095::t_af28a101987a90 55-56
+  s_7947af8a480243::t_9a42fe4b887ec2 22-23,32,53-54
+src/main/ipc/pty/runtime/spawn-preflight.ts
+  s_ff6e2c21ba5da7::t_7bfcdc51dd03db 20-24,129-132,136
+  s_ff6e2c21ba5da7::t_977438303d2a3f 25,29-30,37,135,137-141
+  s_ff6e2c21ba5da7::t_b1e01e28fbaaaf 125
+src/main/agent-hooks/server/server-lifecycle.ts
+  s_7947af8a480243::t_9a42fe4b887ec2 20-21,274
+  s_204218ae0037d6::t_09efde1eeb4f29 32,91,257
+  s_7947af8a480243::t_647b5a8ba86e48 90,92
+  s_204218ae0037d6::t_3706ce0b0aa2e0 258-259
+src/shared/agent-hook-listener/jcode-display-registry.ts
+  s_c89236af773402::t_4fb74b19265788 172
+  s_1280df5d19b095::t_ed5557994b7e30 84-88
+  s_c89236af773402::t_d62e4f20c53ee9 49-52,142-145
+  s_c89236af773402::t_607c7a2a7b10d2 1-48,53-83,89-126,146-171,173-203,205-215
+  s_a34bec96b0715c::t_583d879f92f843 127-141
+  s_1280df5d19b095::t_e519861dd1ca01 204
+src/main/agent-hooks/server-jcode-display-lifetime.test.ts
+  s_4e785249df8132::t_a4c1ab53814c1a 96-98,110-112,139-143,147-149,183-185,317,327-329,349-351,353-355
+  s_48d31b1bc1031e::t_6370b5c7836df8 235,238
+  s_708be9df354612::t_4bd156722821d9 24,134,236,352
+  s_48d31b1bc1031e::t_bf985b4513762a 234,237,239-256,258-260
+  s_708be9df354612::t_eee4613811e594 23
+  s_48d31b1bc1031e::t_8c48e58051add9 257
+  s_4e785249df8132::t_8ba703e3b62c8c 7,43,364,369,375-376
+  s_4e785249df8132::t_fd0138ffc5d4c3 200-203,207-208
+  s_4e785249df8132::t_ef0fbb2af359ff 11-19,25-29,35-37,39-41,45-47,79-80,120-128,162-172,195-199,204-206,279-283,297-316,318-322,324-326,330-340,342-348,356-362,371-373
+  s_4e785249df8132::t_fdb1b883d05f1b 1-6,8-10,20-22,30-34,38,42,44,48-78,81-95,99-109,113-119,130-133,135-138,144-146,150-161,173-182,186-194,209-233,261-278,284-296,323,341,363,365-368,370,374,377-378
+  s_5d9de068d5cd26::t_8cdff4615526d7 129
+src/main/ipc/pty-pane-restart-replace.test.ts
+  s_4e785249df8132::t_ef0fbb2af359ff 3-7
+  s_4e785249df8132::t_012907c99ad463 74-82
+src/main/ipc/pty/spawn-options-assembly.ts
+  s_ff6e2c21ba5da7::t_977438303d2a3f 84,153-155
+src/shared/agent-hook-listener/listener-state.ts
+  s_708be9df354612::t_4bd156722821d9 44
+  s_708be9df354612::t_ee406b0bc621c7 45
+  s_c89236af773402::t_4fb74b19265788 29-30
+  s_c89236af773402::t_607c7a2a7b10d2 59-60,144-145,295,326-327
+src/main/runtime/runtime-agent-orchestration-projection.ts
+  s_708be9df354612::t_4bd156722821d9 30,38
+  s_82e5bc5aacb5f8::t_64e148f6bf350c 42-44,47-49,52-54
+  s_82e5bc5aacb5f8::t_5a90296773511d 16,37,39-41,45-46,50-51,55-70
+src/main/ipc/pty/ipc/spawn.ts
+  s_ff6e2c21ba5da7::t_977438303d2a3f 12
+src/main/ipc/pty/runtime/spawn-state.ts
+  s_ff6e2c21ba5da7::t_977438303d2a3f 115-116
+src/main/ipc/pty/ipc/spawn-env.ts
+  s_ff6e2c21ba5da7::t_977438303d2a3f 17,119-123
+  s_ff6e2c21ba5da7::t_7bfcdc51dd03db 114-118
+src/main/agent-hooks/server/server-state.ts
+  s_7947af8a480243::t_647b5a8ba86e48 54,57
+src/main/jcode/jcode-spawn-terminal-create.test.ts
+  s_82e5bc5aacb5f8::t_9417d7ea5860fb 5-10,24-29,31-42,58,62-67,70-75,77-79,83-85,89
+  s_82e5bc5aacb5f8::t_372aa9fceedf50 1-3,11-16,21-23,30,43-45,56-57,60,68-69,76,80-82,90-91
+  s_82e5bc5aacb5f8::t_81c04275e043c4 61
+  s_82e5bc5aacb5f8::t_4d05c7626ce648 17-20,46-49,86-88
+  s_82e5bc5aacb5f8::t_ab5be7cc5fffc5 4
+  s_82e5bc5aacb5f8::t_c8fe21886bcb52 50-55
+  s_5d9de068d5cd26::t_2c563680d10fcc 59
+src/main/runtime/orca-runtime-tests/terminal-creation-and-readiness.spec.ts
+  s_5a3323eee527da::t_e8ea96fca8fcc4 85
+  s_ff6e2c21ba5da7::t_e362e0dec5342b 30-35
+  s_ff6e2c21ba5da7::t_17b89c67cb24c9 27-29,36-42,46-47
+  s_ff6e2c21ba5da7::t_759d6f6bcf38c7 43-45
+src/main/agent-hooks/server-jcode-display.test.ts
+  s_c89236af773402::t_2776fad32178da 10
+  s_c89236af773402::t_d62e4f20c53ee9 48-50,59-79,86-97,111-118,155-159
+  s_c89236af773402::t_20bcb7d9077460 119-120
+  s_1280df5d19b095::t_698b5542b20f8f 134-140
+  s_c89236af773402::t_ee8f3500ccb356 162-167
+  s_c89236af773402::t_863666a34045ca 1-9,12-47,51-58,80-85,98-110,121-126,148-154,160-161,168-185
+  s_1280df5d19b095::t_5a964312092f24 11,127-133,141-147
+src/main/jcode/hook-service.test.ts
+  s_54868557791156::t_6fa48b1fa3d8c9 30-32,35-37,65-112,122-131
+  s_708be9df354612::t_348561f1f0da60 133
+  s_54868557791156::t_6c1fb8f901575e 2-10
+  s_708be9df354612::t_16269096020440 113-121,132
+src/main/jcode/spawn-hook-env.ts
+  s_ff6e2c21ba5da7::t_6b93e061630710 8-10
+  s_ff6e2c21ba5da7::t_977438303d2a3f 1-7,11-18
+src/shared/agent-hook-listener/jcode-hook-preparation.ts
+  s_c89236af773402::t_d62e4f20c53ee9 69-70
+  s_c89236af773402::t_2776fad32178da 23,56-57,66-68,71-77
+src/main/runtime/runtime-pty-controller-contract.ts
+  s_ff6e2c21ba5da7::t_977438303d2a3f 74-75
+src/main/agent-hooks/server-jcode-spawn.test.ts
+  s_708be9df354612::t_efa49329ff522e 94-103
+  s_7947af8a480243::t_97f3f3e31ab980 1-21,23-27,29-51,53-63,78-85,89-93,104-113,117-125,127-129,134-142,161,174-190,194-237,241-245,251-256,263,267,271-281,287-288,294,302-320
+  s_204218ae0037d6::t_996d61be4640b6 268
+  s_7947af8a480243::t_db6e88bbe956b2 64-77,86-88,114-116,143-148,155-160,162-165,170-173,238-240,282-286,289-293,295-301
+  s_204218ae0037d6::t_0046d89a3a02a1 258-262
+  s_7947af8a480243::t_3b86c16d715a4b 167,169
+  s_204218ae0037d6::t_149e997c2e801a 126,130,257,264-265,269-270
+  s_7947af8a480243::t_e29a0fbb06b3dd 166,168,246-250
+  s_204218ae0037d6::t_09efde1eeb4f29 266
+  s_7947af8a480243::t_647b5a8ba86e48 22,28,52,131-133,149-154,191-193
+src/main/runtime/runtime-external-parent-links.test.ts
+  s_82e5bc5aacb5f8::t_880e9f02c6beda 1-22
+src/main/runtime/runtime-external-parent-links.ts
+  s_82e5bc5aacb5f8::t_5a90296773511d 8-17,19-20
+  s_82e5bc5aacb5f8::t_465823a6449c75 1-7,21
+  s_82e5bc5aacb5f8::t_4f6afb1bdf79db 18
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "bd67ae0ff58c38006266d15ef4262c5aa7477ea3",
+  "prompts": {},
+  "sessions": {
+    "s_1280df5d19b095": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a16908-f036-74e2-b1e6-876ab90d9b17",
+        "model": "gpt-6.1-sol"
+      },
+      "human_author": "TheophileDiot <tdiot@bunkerity.com>"
+    },
+    "s_204218ae0037d6": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a16917-1e9b-7501-ba30-9286c93d9b28",
+        "model": "gpt-6.1-sol"
+      },
+      "human_author": "TheophileDiot <tdiot@bunkerity.com>"
+    },
+    "s_467540c35dc491": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a168e0-08d5-75e3-8657-868a88651e28",
+        "model": "gpt-6.1-sol"
+      },
+      "human_author": "TheophileDiot <tdiot@bunkerity.com>"
+    },
+    "s_48d31b1bc1031e": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a16955-8f74-7db3-aa80-4cebabd688e6",
+        "model": "gpt-6.1-sol"
+      },
+      "human_author": "TheophileDiot <tdiot@bunkerity.com>"
+    },
+    "s_4e785249df8132": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a16928-a441-7202-a7be-58114132b017",
+        "model": "gpt-6.1-sol"
+      },
+      "human_author": "TheophileDiot <tdiot@bunkerity.com>"
+    },
+    "s_54868557791156": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a168d4-3026-7233-8239-0eed87a2d89b",
+        "model": "gpt-6.1-sol"
+      },
+      "human_author": "TheophileDiot <tdiot@bunkerity.com>"
+    },
+    "s_5a3323eee527da": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a16903-a52e-7ab0-a15a-680546075016",
+        "model": "gpt-6.1-sol"
+      },
+      "human_author": "TheophileDiot <tdiot@bunkerity.com>"
+    },
+    "s_5d9de068d5cd26": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a17710-df2b-7831-ba37-9946f7cf5573",
+        "model": "gpt-6.1-sol"
+      },
+      "human_author": "TheophileDiot <tdiot@bunkerity.com>"
+    },
+    "s_5e07a300c20131": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a16896-c970-71c3-bb68-7a97e52b6666",
+        "model": "gpt-6.1-sol"
+      },
+      "human_author": "TheophileDiot <tdiot@bunkerity.com>"
+    },
+    "s_708be9df354612": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a16993-5809-7eb1-a54b-0c8e5a550aef",
+        "model": "gpt-6.1-sol"
+      },
+      "human_author": "TheophileDiot <tdiot@bunkerity.com>"
+    },
+    "s_7947af8a480243": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a16909-acf4-7410-afb8-302f72e890c3",
+        "model": "gpt-6.1-sol"
+      },
+      "human_author": "TheophileDiot <tdiot@bunkerity.com>"
+    },
+    "s_82e5bc5aacb5f8": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a16913-f27f-7870-b13c-aeb391cd897a",
+        "model": "gpt-6.1-sol"
+      },
+      "human_author": "TheophileDiot <tdiot@bunkerity.com>"
+    },
+    "s_a34bec96b0715c": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a1695d-f62e-7fe1-80fa-cb23560f2711",
+        "model": "gpt-6.1-sol"
+      },
+      "human_author": "TheophileDiot <tdiot@bunkerity.com>"
+    },
+    "s_c89236af773402": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a168f3-037a-7210-9301-56c085e29d88",
+        "model": "gpt-6.1-sol"
+      },
+      "human_author": "TheophileDiot <tdiot@bunkerity.com>"
+    },
+    "s_ff6e2c21ba5da7": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a168e5-0ded-79c1-9575-5cbad6826723",
+        "model": "gpt-6.1-sol"
+      },
+      "human_author": "TheophileDiot <tdiot@bunkerity.com>"
+    }
+  }
+}
