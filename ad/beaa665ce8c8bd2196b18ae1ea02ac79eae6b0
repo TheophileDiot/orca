@@ -1,0 +1,81 @@
+src/main/jcode/hook-service-read-failure.test.ts
+  s_49f9b4522c8e46::t_6ae71dd71ee874 1-16,18-71,73-111
+  s_49f9b4522c8e46::t_592dcb07134b3e 72
+src/main/jcode/hook-service.test.ts
+  s_2540424957e342::t_bcea41c8f2b337 2-13,404-406,471-505,507-515
+  s_2540424957e342::t_1bc820d7f200d0 34-35,37-52,257-303,315-403,516
+  s_2540424957e342::t_2bb19fec796787 304-314
+  s_49f9b4522c8e46::t_6ae71dd71ee874 407-463,465-470,517
+  s_49f9b4522c8e46::t_146675a599ba8d 464
+src/main/agent-hooks/remote-hook-service-installers-jcode.test.ts
+  s_2540424957e342::t_87024843505f2c 1-15,17-131,163
+  s_49f9b4522c8e46::t_1f8d5fc62760a6 132-162
+src/main/agent-hooks/remote-hook-service-installers-sftp.test-fixture.ts
+  s_2540424957e342::t_87024843505f2c 2,4,16,23,31
+src/main/jcode/hook-text-edits.ts
+  s_49f9b4522c8e46::t_dcf6ac5bb0a859 88,92-109
+  s_6a3cc52333088e::t_28f34a05e91bde 123-126,140-141
+  s_6a3cc52333088e::t_0fe346d143eab6 1-31,32-41,43-86,89-91,110-111,113-122,127-139,142-153,155-161,163-183,185-202
+src/main/jcode/hook-assignment-scan.ts
+  s_49f9b4522c8e46::t_3d1d58968fe539 37-38,57,94-95,104
+  s_6a3cc52333088e::t_dbe767c51a4ef0 1-36,39-42,44-49,51-56,58-93,96-103,105-203
+src/main/agent-hooks/remote-hook-service-installers.test.ts
+  s_2540424957e342::t_87024843505f2c 29
+src/main/jcode/hook-config.test.ts
+  s_6a3cc52333088e::t_c480cb018faece 9,459-526
+  s_6a3cc52333088e::t_240170ba29ec48 209
+  s_6a3cc52333088e::t_5128abb9a3435b 13-16,18-28
+  s_49f9b4522c8e46::t_1f8d5fc62760a6 4
+  s_6a3cc52333088e::t_3c1459bd6eb1f2 214,228-229,239-240
+  s_6a3cc52333088e::t_29eaf7bbd4ebe8 174-208,210-212,215-227,230-238,241-284,298-354,421-458,527-559
+  s_6a3cc52333088e::t_8a5afa02d3a66d 285-297
+  s_49f9b4522c8e46::t_7cdc02a91d271b 355-413,417-420
+  s_49f9b4522c8e46::t_13f1af06fae830 414-416
+src/main/jcode/hook-service.ts
+  s_49f9b4522c8e46::t_13f1af06fae830 164-167
+  s_2540424957e342::t_5fbc9b51ab62d2 6
+  s_49f9b4522c8e46::t_dcf6ac5bb0a859 24,26,100-102,106,131-134,138,145,163,180,194,200-210,226,239,268-269,271-272,274-280,282-283,286-296
+  s_2540424957e342::t_bd055d45585db7 23,25,105,107-110,123,171,175,181-185,188,191,218-224,225,227-238,240-243,245-254,256-265
+  s_2540424957e342::t_1632db6bb5451b 1,135-137,139-144,300
+  s_49f9b4522c8e46::t_338616e09c11c0 297
+src/main/jcode/hook-config.ts
+  s_6a3cc52333088e::t_f24895c3cb84c4 12,21-22,26,28-29,35,42,53,56,65,81-84,86-88,90-93,102-107,111-114,116-118,122-123,125,132-134,137-140,143
+  s_49f9b4522c8e46::t_dcf6ac5bb0a859 95-99
+  s_6a3cc52333088e::t_cc5424547bb5ac 1,3-10,37-38,41,45-52,54-55,59-64,66,85,136
+  s_2540424957e342::t_bd055d45585db7 44
+  s_49f9b4522c8e46::t_3d1d58968fe539 14-20,25,27,30,33-34,71
+src/main/agent-hooks/README.md
+  s_2540424957e342::t_14a0090d444daa 61
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "adbeaa665ce8c8bd2196b18ae1ea02ac79eae6b0",
+  "prompts": {},
+  "sessions": {
+    "s_2540424957e342": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "1d2f0407-853d-438c-b360-cb3069adccbb",
+        "model": "claude-sonnet-5-5"
+      },
+      "human_author": "TheophileDiot <tdiot@bunkerity.com>"
+    },
+    "s_49f9b4522c8e46": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "f323d5b6-448d-4f4b-aa4d-1caf63e216c1",
+        "model": "claude-sonnet-5-5"
+      },
+      "human_author": "TheophileDiot <tdiot@bunkerity.com>"
+    },
+    "s_6a3cc52333088e": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "e2a337b5-1df8-49e5-a960-d4e812c2cd35",
+        "model": "claude-sonnet-5-5"
+      },
+      "human_author": "TheophileDiot <tdiot@bunkerity.com>"
+    }
+  }
+}
