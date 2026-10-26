@@ -21,6 +21,7 @@ import { sameAgentStatusTerminalOwner } from '../agent-status-terminal-owner'
 import { reapUnconfirmedRestoredJcodeSubagents } from '../jcode-subagent-roster'
 import { findJcodePendingInput } from './jcode-pending-input-queue'
 import { copyRegistry } from './jcode-session-ownership'
+import { resolveJcodeDisplayEnvelope } from './jcode-display-registry'
 
 export type PreparedJcodeHook = {
   resolution: JcodeSessionResolution
@@ -53,14 +54,8 @@ export function prepareJcodeHookPayload(
   if (!envelope) {
     return null
   }
-  const {
-    record,
-    paneKey,
-    hookPayloadRecord: hookPayload,
-    tabId,
-    worktreeId,
-    launchToken
-  } = envelope
+  const { record, hookPayloadRecord: hookPayload } = envelope
+  let { paneKey, tabId, worktreeId, launchToken } = envelope
   const eventName =
     readFirstString(record, ['hook_event_name', 'hookEventName', 'hook_type', 'hookType']) ??
     hookPayload.hook_event_name ??
@@ -68,6 +63,18 @@ export function prepareJcodeHookPayload(
     hookPayload.event
   if (typeof eventName !== 'string') {
     return null
+  }
+  const display = resolveJcodeDisplayEnvelope({
+    state,
+    stamped: { paneKey, tabId, worktreeId, launchToken },
+    sessionId:
+      typeof hookPayload.session_id === 'string' ? hookPayload.session_id.trim() : undefined
+  })
+  if (display.kind === 'drop') {
+    return null
+  }
+  if (display.kind === 'route') {
+    ;({ paneKey, tabId, worktreeId, launchToken } = display.envelope)
   }
   if (
     inheritsActiveHookPaneIdentity(

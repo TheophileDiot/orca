@@ -22,6 +22,7 @@ import {
   movePaneScopedMapEntries,
   movePaneScopedSetEntries
 } from './pane-scoped-cache-entries'
+import { moveJcodeDisplayBindings } from './jcode-display-registry'
 import {
   clearJcodePaneSessions,
   createJcodeSessionRegistry,
@@ -32,6 +33,8 @@ import {
   moveOpenCodeSessionBindings,
   unbindOpenCodeSessionsOfPane
 } from './opencode-session-registry'
+
+export { clearPaneTurnCacheState } from './listener-turn-cache-state'
 
 const legacyStatusAdapterByState = new WeakMap<HookListenerState, AgentStatusLegacyAdapter>()
 
@@ -58,6 +61,8 @@ export function createHookListenerState(
     jcodeTurnPromptByPaneKey: new Map(),
     jcodeTurnByPaneKey: new Map(),
     jcodeSessions: createJcodeSessionRegistry(),
+    jcodeTabOwners: new Map(),
+    jcodeDisplayBindings: new Map(),
     jcodeSubagentRosterByPaneKey: new Map(),
     jcodeRootPayloadByPaneKey: new Map(),
     jcodeTurnRevision: { current: 0 },
@@ -208,6 +213,7 @@ export function movePaneCacheState(
     return
   }
   if (moveJcodePaneSessions(state, fromPaneKey, toPaneKey)) {
+    moveJcodeDisplayBindings(state, fromPaneKey, toPaneKey)
     movePaneScopedMapEntries(state.jcodeTurnPromptByPaneKey, fromPaneKey, toPaneKey)
     movePaneScopedMapEntries(state.jcodeTurnByPaneKey, fromPaneKey, toPaneKey)
     movePaneScopedMapEntries(state.jcodeSubagentRosterByPaneKey, fromPaneKey, toPaneKey)
@@ -240,20 +246,10 @@ export function movePaneCacheState(
   movePaneScopedMapEntries(state.hermesTurnByPaneKey, fromPaneKey, toPaneKey)
 }
 
-export function clearPaneTurnCacheState(state: HookListenerState, paneKey: string): void {
-  state.lastPromptByPaneKey.delete(paneKey)
-  state.lastToolByPaneKey.delete(paneKey)
-  state.antigravityCompletedTranscriptByPaneKey.delete(paneKey)
-  state.antigravitySubagentParentByPaneKey.delete(paneKey)
-  state.jcodeTurnPromptByPaneKey.delete(paneKey)
-  state.jcodeTurnByPaneKey.delete(paneKey)
-  state.ampCompletedCacheKeys.delete(paneKey)
-  state.grokActiveTurnByPaneKey.delete(paneKey)
-  state.grokMainAgentStatusByPaneKey.delete(paneKey)
-}
-
 export function clearAllListenerCaches(state: HookListenerState): void {
   state.jcodeSessions = createJcodeSessionRegistry()
+  state.jcodeTabOwners.clear()
+  state.jcodeDisplayBindings.clear()
   state.lastPromptByPaneKey.clear()
   state.lastToolByPaneKey.clear()
   clearLegacyAgentStatuses(state)

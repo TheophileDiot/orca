@@ -1,4 +1,4 @@
-import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs'
+import { existsSync, mkdirSync, readFileSync, rmSync, writeFileSync } from 'node:fs'
 import { dirname } from 'node:path'
 import type { SFTPWrapper } from 'ssh2'
 import type { AgentHookInstallState, AgentHookInstallStatus } from '../../shared/agent-hook-types'
@@ -32,8 +32,10 @@ import {
   getJcodePosixManagedScriptFileName,
   getJcodeRemoteConfigPath,
   getJcodeRemoteManagedCommand,
+  getJcodeSpawnScriptPath,
   JCODE_HOOK_EVENTS
 } from './hook-settings'
+import { buildJcodeSpawnHookScript } from './spawn-hook-script'
 
 function getManagedScript(target: 'local' | 'posix' = 'local'): string {
   if (target === 'local' && process.platform === 'win32') {
@@ -173,6 +175,7 @@ export class JcodeHookService {
       }
     }
     writeManagedScript(scriptPath, getManagedScript())
+    writeManagedScript(getJcodeSpawnScriptPath(), buildJcodeSpawnHookScript())
     const content = readConfigContent(configPath)
     const edited = applyJcodeManagedHooks(
       content,
@@ -187,6 +190,7 @@ export class JcodeHookService {
   // jcode invokes the configured file, so upgrades must refresh existing scripts.
   async refreshManagedScripts(): Promise<void> {
     await refreshManagedScriptIfPresent(getJcodeManagedScriptPath(), getManagedScript())
+    await refreshManagedScriptIfPresent(getJcodeSpawnScriptPath(), buildJcodeSpawnHookScript())
   }
 
   async installRemote(sftp: SFTPWrapper, remoteHome: string): Promise<AgentHookInstallStatus> {
@@ -243,6 +247,11 @@ export class JcodeHookService {
     const removed = removeJcodeManagedHooks(content, getJcodeManagedScriptFileName())
     if (removed.changed) {
       writeConfigContent(configPath, removed.content)
+    }
+    try {
+      rmSync(getJcodeSpawnScriptPath(), { force: true })
+    } catch {
+      // config removal already succeeded; script cleanup is best effort.
     }
     return this.getStatus()
   }

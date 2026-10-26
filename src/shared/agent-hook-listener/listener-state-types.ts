@@ -15,6 +15,7 @@ import type { CodexSubagentTranscriptState } from '../codex-subagent-transcript'
 import type { MuseSessionLogState } from '../muse-session-log'
 import type { AgentHookEventPayload, ToolSnapshot } from './listener-event'
 import type { JcodeUserPromptEvidence } from '../jcode-session-files'
+import type { JcodeDisplayBinding, JcodeTabOwner } from './jcode-display-registry'
 import type { JcodeSessionRegistry } from './jcode-session-registry'
 import type { OpenCodeSessionBinding } from './opencode-session-registry'
 
@@ -33,6 +34,8 @@ export type HookListenerState = {
   jcodeTurnPromptByPaneKey: Map<string, JcodeUserPromptEvidence | null>
   jcodeTurnByPaneKey: Map<string, JcodeTurnAdmission>
   jcodeSessions: JcodeSessionRegistry
+  jcodeTabOwners: Map<string, JcodeTabOwner>
+  jcodeDisplayBindings: Map<string, JcodeDisplayBinding>
   jcodeSubagentRosterByPaneKey: Map<string, JcodeSubagentRoster>
   jcodeRootPayloadByPaneKey: Map<string, ParsedAgentStatusPayload>
   /** Shared by copied listener views; survives all pane/cache teardown. */

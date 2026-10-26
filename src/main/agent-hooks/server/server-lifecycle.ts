@@ -19,6 +19,8 @@ import { trackEmptyPaneKeyHook } from './server-transport-rules'
 import { AgentHookServerStatusHookLifecycle } from './server-status-hook-lifecycle'
 import { OPENCODE_STARTUP_PROMPT_CLAIM_PATH } from '../../../shared/opencode-startup-prompt'
 import { CLAUDE_AGENT_VIEW_PATH } from '../../../shared/claude-agent-view'
+import { JCODE_SPAWN_HOOK_PATHNAME } from '../../../shared/jcode-spawn-hook'
+import { handleJcodeSpawnRequest } from './server-jcode-spawn'
 
 export abstract class AgentHookServerLifecycle extends AgentHookServerStatusHookLifecycle {
   private readonly startup = new AgentHookStartup()
@@ -76,6 +78,9 @@ export abstract class AgentHookServerLifecycle extends AgentHookServerStatusHook
         req.destroy()
       })
       const pathname = new URL(req.url ?? '/', 'http://127.0.0.1').pathname
+      if (pathname === JCODE_SPAWN_HOOK_PATHNAME) {
+        return handleJcodeSpawnRequest(req, res, this.onJcodeSpawn, isCurrent, this.jcodeSpawns)
+      }
       try {
         const body = await readRequestBody(req)
         if (!isCurrent()) {
@@ -237,18 +242,11 @@ export abstract class AgentHookServerLifecycle extends AgentHookServerStatusHook
     }
   }
 
-  private rollbackTransportStart(): void {
-    this.server?.close()
-    this.server = null
-    this.port = 0
-    this.token = ''
-    this.endpointFileWritten = false
-  }
-
   /** Quit retains status until chat teardown reads resumable child and background work. */
   stop(options?: { keepStatus?: boolean }): void {
     this.startup.stop()
     this.claudeAgentViews.clear()
+    this.abortJcodeSpawns()
     this.clearJcodeTitleInference()
     // Terminal status may still have a pending write while hook ingress is disabled.
     if (this.statusHooksEnabled || this.statusPersistTimer) {
@@ -263,6 +261,7 @@ export abstract class AgentHookServerLifecycle extends AgentHookServerStatusHook
     this.clearStartupPromptClaims?.()
     this.clearStartupPromptClaims = null
     this.onStartupPromptClaim = null
+    this.onJcodeSpawn = null
     this.onPaneStatusCleared = null
     this.onTransportInterference = null
     this.transportInterference.reset()

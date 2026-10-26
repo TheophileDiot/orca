@@ -2,7 +2,6 @@ import type {
   AgentProcessPresence,
   AgentProcessVerdict
 } from '../../../shared/agent-process-presence'
-import type { createServer } from 'node:http'
 import { randomBytes, randomUUID } from 'node:crypto'
 
 import {
@@ -52,8 +51,9 @@ import type {
 } from './server-types'
 import { RevisionedMap } from './revisioned-map'
 import { forgetAgentExit, type AgentExitEvidence } from './agent-exit-evidence'
+import { AgentHookServerTransportState } from './server-transport-state'
 
-export abstract class AgentHookServerState {
+export abstract class AgentHookServerState extends AgentHookServerTransportState {
   protected canWriteLegacyStatusRow(entry: AgentHookEventPayload): boolean {
     return canAdmitLegacyAgentStatusEntry(
       this.state,
@@ -95,9 +95,6 @@ export abstract class AgentHookServerState {
     this.canonicalListingOrder.clear()
     this.canonicalSubjectsByPane.clear()
   }
-  protected server: ReturnType<typeof createServer> | null = null
-  protected port = 0
-  protected token = ''
   // Detect cross-talk between dev and packaged hook endpoints.
   protected env = 'production'
   protected onAgentStatus: ServerAgentStatusListener = null
@@ -122,7 +119,6 @@ export abstract class AgentHookServerState {
   // start() supplies paths so the hook server has no Electron dependency.
   protected endpointDir: string | null = null
   protected endpointFilePathCache: string | null = null
-  protected endpointFileWritten = false
   protected state: HookListenerState = createHookListenerState({
     nextListingOrder: this.nextStatusListingOrder,
     isCanonicalPaneKey: (paneKey) => this.canonicalSubjectsByPane.has(paneKey)
